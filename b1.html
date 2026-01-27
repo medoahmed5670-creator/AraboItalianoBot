@@ -2,24 +2,25 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>المستوى B1 - المتوسط</title>
+    <title>المستوى B1 - المنهج المتوسط</title>
     <style>
-        :root { --gold: #d97706; }
-        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
-        header { background: var(--gold); color: white; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--gold); }
+        :root { --color: #d97706; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fffbeb; margin: 0; direction: rtl; }
+        header { background: var(--color); color: white; padding: 20px; text-align: center; border-bottom: 5px solid #333; }
+        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 10px solid var(--color); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .audio-btn { background: #eee; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+        .back-btn { display: inline-block; margin: 10px; color: white; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header><h1>📚 المستوى B1: التحدث بطلاقة</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <header>
+        <a href="index.html" class="back-btn">⬅️ رجوع للرئيسية</a>
+        <h1>المستوى B1: التحدث بطلاقة</h1>
+    </header>
     <div class="container">
-        <div class="unit"><h3>الوحدة 1: الماضي المستمر (Imperfetto)</h3><p>Quando ero piccolo... <button onclick="speak('Quando ero piccolo giocavo sempre')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 2: الضمائر المباشرة</h3><p>Lo compro io. <button onclick="speak('Lo compro io')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 3: صيغة الشرط</h3><p>Vorrei viaggiare. <button onclick="speak('Vorrei viaggiare in tutto il mondo')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 5: صيغة الأمر</h3><p>Vieni qui! <button onclick="speak('Vieni qui subito!')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 9: صيغة الاحتمال (Congiuntivo)</h3><p>Spero che tu stia bene. <button onclick="speak('Spero che tu stia bene')">🔊</button></p></div>
-    </div>
-    <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
-</body>
-</html>
+        <div class="unit"><h3>الوحدة 1: الماضي المستمر (L'imperfetto)</h3><p>للوصف في الماضي: <b>Ero, Avevo.</b> <button class="audio-btn" onclick="speak('Quando ero piccolo, giocavo sempre fuori')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 2: الضمائر المباشرة (I pronomi diretti)</h3><p><b>Lo, La, Li, Le.</b> <button class="audio-btn" onclick="speak('La pizza? La mangio io!')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 3: صيغة الشرط (Condizionale Presente)</h3><p>لطلب مهذب: <b>Vorrei, Potrei.</b> <button class="audio-btn" onclick="speak('Vorrei un bicchiere d\'acqua, per favore')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 4: الضمائر غير المباشرة</h3><p><b>Mi, Ti, Gli, Le.</b> <button class="audio-btn" onclick="speak('Le ho regalato un fiore')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 5: صيغة الأمر (L'imperativo)</h3><p><b>Vieni,
