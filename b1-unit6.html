@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B1 - الوحدة 6: المقارنة</title>
+    <style>
+        :root { --color: #16a34a; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0fdf4; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; border-right: 12px solid var(--color); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>⚖️ الوحدة 6: Il Comparativo</h1>
+        <p>1. <b>Più ... di:</b> أكتر من | 2. <b>Meno ... di:</b> أقل من | 3. <b>Come:</b> مثل</p>
+        <div style="background:#dcfce7; padding:15px; border-radius:10px;">
+            <b>مثال:</b> <span id="t3">Il treno è più veloce dell'autobus.</span>
+            <button onclick="speak('Il treno è più veloce dell\'autobus')">🔊</button>
+        </div>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
