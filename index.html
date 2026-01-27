@@ -3,34 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية إيطالي بالمصري 2026</title>
+    <title>أكاديمية إيطالي بالمصري - الركن التعليمي</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
-        .hero { background: linear-gradient(135deg, #009246 33%, #ffffff 33%, #ffffff 66%, #ce2b37 66%); padding: 50px 20px; text-align: center; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .hero h1 { background: rgba(255,255,255,0.9); display: inline-block; padding: 10px 20px; border-radius: 10px; color: #333; margin: 0; }
-        .level-card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; border-right: 10px solid #009246; text-decoration: none; color: inherit; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .level-card:hover { transform: scale(1.02); }
-        .btn { background: #009246; color: white; padding: 10px 20px; border-radius: 8px; font-weight: bold; }
+        :root { --green: #009246; --white: #ffffff; --red: #ce2b37; --dark: #1a1a1a; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; }
+        .hero { background: linear-gradient(135deg, var(--green) 0%, #005d2d 100%); color: white; padding: 40px 20px; text-align: center; border-bottom: 8px solid var(--red); }
+        .container { padding: 20px; max-width: 800px; margin: auto; }
+        .welcome-card { background: white; border-radius: 20px; padding: 20px; margin-top: -30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
+        
+        .unit-grid { display: grid; gap: 15px; margin-top: 30px; }
+        .unit-box { background: white; border-radius: 15px; padding: 20px; display: flex; align-items: center; text-decoration: none; color: var(--dark); box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-right: 10px solid var(--green); transition: 0.3s; }
+        .unit-box:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .unit-num { background: var(--red); color: white; min-width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-left: 15px; }
+        .unit-title { flex-grow: 1; text-align: right; }
+        .unit-title h3 { margin: 0; font-size: 1.1em; }
+        .unit-title p { margin: 5px 0 0; font-size: 0.85em; color: #666; }
+        
+        .status-badge { font-size: 0.7em; background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div class="header" style="text-align:center;">
     <div class="hero">
         <h1>🇮🇹 أكاديمية إيطالي بالمصري</h1>
-        <p style="font-weight: bold; margin-top: 15px;">مشروع 2026 - الإصدار الجديد</p>
+        <p>طريقك لاحتراف اللغة الإيطالية من الصفر</p>
     </div>
-</div>
 
-<div style="max-width: 600px; margin: 0 auto;">
-    <a href="a1.html" class="level-card">
-        <div class="level-info">
-            <h2>المستوى A1 🟢</h2>
-            <p>بداية الرحلة: الحروف، الأرقام، والتحيات.</p>
+    <div class="container">
+        <div class="welcome-card">
+            <h2>مرحباً بك يا بطل! 👋</h2>
+            <p>اختار الوحدة اللي عاوز تذاكرها النهاردة:</p>
         </div>
-        <div class="btn">دخول</div>
-    </a>
-</div>
+
+        <div class="unit-grid">
+            <a href="unit0.html" class="unit-box">
+                <div class="unit-title">
+                    <h3>الوحدة 0: Benvenuti</h3>
+                    <p>الحروف، النطق، والأرقام</p>
+                </div>
+                <span class="status-badge">جاهزة ✅</span>
+                <div class="unit-num">0</div>
+            </a>
+
+            <a href="unit1.html" class="unit-box" style="border-right-color: #333;">
+                <div class="unit-title">
+                    <h3>الوحدة 1: Un nuovo inizio</h3>
+                    <p>التحيات، فعل الملكية، وتصريف -ARE</p>
+                </div>
+                <span class="status-badge">جاهزة ✅</span>
+                <div class="unit-num">1</div>
+            </a>
+
+            <a href="unit2.html" class="unit-box">
+                <div class="unit-title">
+                    <h3>الوحدة 2: Tempo Libero</h3>
+                    <p>أيام الأسبوع والأفعال الشاذة</p>
+                </div>
+                <span class="status-badge">جاهزة ✅</span>
+                <div class="unit-num">2</div>
+            </a>
+
+            <a href="unit3.html" class="unit-box" style="border-right-color: var(--red);">
+                <div class="unit-title">
+                    <h3>الوحدة 3: In città</h3>
+                    <p>الجمع وحروف الجر المدمجة</p>
+                </div>
+                <span class="status-badge">جاهزة ✅</span>
+                <div class="unit-num">3</div>
+            </a>
+
+            <a href="unit4.html" class="unit-box">
+                <div class="unit-title">
+                    <h3>الوحدة 4: Aspetto e Carattere</h3>
+                    <p>وصف الأشخاص والطباع</p>
+                </div>
+                <span class="status-badge">جاهزة ✅</span>
+                <div class="unit-num">4</div>
+            </a>
+        </div>
+    </div>
 
 </body>
 </html>
