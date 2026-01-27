@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة 1: المرجع الكامل والاختبار</title>
+    <style>
+        :root { --green: #009246; --red: #ce2b37; --dark: #2c3e50; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg); margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 8px solid var(--red); }
+        .container { padding: 15px; max-width: 1000px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-right: 12px solid var(--green); }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .explanation { background: #fffde7; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #f9e79f; font-size: 1em; }
+        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; }
+        
+        /* تنسيق الجداول */
+        .table-wrapper { width: 100%; overflow-x: auto; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 450px; }
+        th { background: #333; color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+
+        /* منطقة الاختبار */
+        .quiz-card { background: #eef2f7; border: 3px dashed var(--green); border-radius: 20px; padding: 25px; }
+        .question { font-size: 1.1em; font-weight: bold; margin-bottom: 15px; color: var(--dark); }
+        .option { display: block; width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #fff; border-radius: 10px; background: white; cursor: pointer; text-align: right; transition: 0.3s; font-weight: 500; }
+        .option:hover { border-color: var(--green); background: #f9fff9; }
+        #quiz-result { margin-top: 20px; font-weight: bold; text-align: center; font-size: 1.2em; }
+        .success { color: #009246; }
+        .error { color: #ce2b37; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🇮🇹 الوحدة 1: Un nuovo inizio</h1>
+    <p>الشرح الكامل + الاختبار النهائي</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. التحيات (I Saluti)</h2>
+        <div class="explanation">الإيطاليين بيهتموا جداً بالتحية، ركز في الفرق بين الرسمي والودي:</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>التحية</th><th>المعنى</th><th>الحالة</th></tr>
+                <tr><td class="highlight">Ciao</td><td>أهلاً / سلام</td><td>بين الأصحاب والأهل</td></tr>
+                <tr><td class="highlight">Buongiorno</td><td>صباح الخير</td><td>رسمي (طول النهار)</td></tr>
+                <tr><td class="highlight">Buonasera</td><td>مساء الخير</td><td>رسمي (من بعد الساعة 4)</td></tr>
+                <tr><td class="highlight">Salve</td><td>مرحباً</td><td>رسمي جداً (تنفع أي وقت)</td></tr>
+                <tr><td class="highlight">Arrivederci</td><td>إلى اللقاء</td><td>عند المغادرة</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. فعل الملكية (Verbo Avere)</h2>
+        <div class="explanation">الفعل ده "جوكر"، بنستخدمه للملكية وللتعبير عن السن. ركز إن حرف الـ <b>H</b> صامت (مبيتنطقش):</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><td>Io <b>Ho</b> (أو)</td><td>Tu <b>Hai</b> (آي)</td><td>Lui/Lei <b>Ha</b> (آ)</td></tr>
+                <tr><td>Noi <b>Abbiamo</b></td><td>Voi <b>Avete</b></td><td>Loro <b>Hanno</b> (آنّو)</td></tr>
+            </table>
+        </div>
+        <p>💡 مثال السن: <b>Io ho diciotto anni</b> (أنا عندي 18 سنة).</p>
+    </div>
+
+    <div class="card">
+        <h2>3. أدوات النكرة (Articoli Indeterminativi)</h2>
+        <div class="explanation">النكرة يعني حاجة مش معروفة (بنت، ولد، كتاب..).</div>
+        <h3>🔹 للمذكر (Maschile):</h3>
+        <p>• <span class="highlight">Un</span>: مع الحروف الساكنة والمتحركة. (Un ragazzo / Un amico).</p>
+        <p>• <span class="highlight">Uno</span>: مع الـ Z والـ S+ساكن. (Uno zaino / Uno studente).</p>
+        
+        <h3>🔸 للمؤنث (Femminile):</h3>
+        <p>• <span class="highlight">Una</span>: مع الحروف الساكنة. (Una ragazza).</p>
+        <p>• <span class="highlight">Un'</span>: مع الحروف المتحركة. (Un'amica).</p>
+    </div>
+
+    <div class="card" style="border-right-color: #333;">
+        <h2>4. أفعال المجموعة الأولى (-ARE)</h2>
+        <div class="explanation">بنشيل الـ <b>-are</b> ونحط النهايات دي ثابتة مع أي فعل منتظم:</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>Io</th><th>Tu</th><th>Lui/Lei</th><th>Noi</th><th>Voi</th><th>Loro</th></tr>
+                <tr><td class="highlight">-o</td><td class="highlight">-i</td><td class="highlight">-a</td><td class="highlight">-iamo</td><td class="highlight">-ate</td><td class="highlight">-ano</td></tr>
+            </table>
+        </div>
+        <p>مثال فعل يتحدث: <b>Io parlo, Tu parli, Lui parla...</b></p>
+    </div>
+
+    <div class="card quiz-card">
+        <h2>📝 اختبار الوحدة الأولى</h2>
+        <div id="quiz-area">
+            <p class="question">أي جملة صحيحة لقول "أنا أتحدث الإيطالية"؟</p>
+            <button class="option" onclick="check(false)">A) Io parla italiano</button>
+            <button class="option" onclick="check(true)">B) Io parlo italiano</button>
+            <button class="option" onclick="check(false)">C) Io parlate italiano</button>
+        </div>
+        <div id="quiz-result"></div>
+    </div>
+
+</div>
+
+<script>
+    function check(isCorrect) {
+        const result = document.getElementById('quiz-result');
+        if(isCorrect) {
+            result.innerHTML = "✅ وحش الإيطالي! إجابة صحيحة (الفعل مع Io ينتهي بـ o).";
+            result.className = "success";
+        } else {
+            result.innerHTML = "❌ ركز يا بطل! ارجع راجع جدول أفعال الـ -ARE تاني.";
+            result.className = "error";
+        }
+    }
+</script>
+
+</body>
+</html>
