@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة 5: الأكل والمطعم - A cena</title>
+    <style>
+        :root { --green: #009246; --red: #ce2b37; --dark: #2c3e50; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 8px solid var(--red); }
+        .container { padding: 15px; max-width: 1000px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-right: 12px solid var(--green); }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .explanation { background: #fffde7; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #f9e79f; }
+        .highlight { color: var(--red); font-weight: bold; }
+        
+        .table-wrapper { width: 100%; overflow-x: auto; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        th { background: #333; color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+
+        .quiz-card { background: #eef2f7; border: 3px dashed var(--green); border-radius: 20px; padding: 25px; }
+        .option { display: block; width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #fff; border-radius: 10px; background: white; cursor: pointer; text-align: right; }
+        #quiz-result { margin-top: 20px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🇮🇹 الوحدة 5: A cena</h1>
+    <p>الأكل، المطعم، وأفعال الـ ISC</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. أفعال الـ ISC (Verbi in -isc)</h2>
+        <div class="explanation">فيه أفعال في المجموعة التالتة (-ire) بتاخد مقطع زيادة <span class="highlight">isc</span> مع كل الضمائر ما عدا Noi و Voi.</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>الضمير</th><th>فعل Finire (ينهي)</th><th>فعل Capire (يفهم)</th></tr>
+                <tr><td>Io</td><td class="highlight">Finisco</td><td class="highlight">Capisco</td></tr>
+                <tr><td>Tu</td><td class="highlight">Finisci</td><td class="highlight">Capisci</td></tr>
+                <tr><td>Lui/Lei</td><td class="highlight">Finisce</td><td class="highlight">Capisce</td></tr>
+                <tr><td>Noi</td><td>Finiamo</td><td>Capiamo</td></tr>
+                <tr><td>Voi</td><td>Finite</td><td>Capite</td></tr>
+                <tr><td>Loro</td><td class="highlight">Finiscono</td><td class="highlight">Capiscono</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. في المطعم (Al ristorante)</h2>
+        <ul>
+            <li><span class="highlight">Il menù:</span> القائمة.</li>
+            <li><span class="highlight">Il cameriere:</span> الجرسون.</li>
+            <li><span class="highlight">Il conto:</span> الحساب.</li>
+            <li><span class="highlight">Primo piatto:</span> الطبق الأول (مكرونة أو أرز).</li>
+            <li><span class="highlight">Secondo piatto:</span> الطبق الرئيسي (لحم أو سمك).</li>
+        </ul>
+    </div>
+
+    <div class="card quiz-card">
+        <h2>📝 اختبار نهاية المستوى A1</h2>
+        <div id="quiz-area">
+            <p style="font-weight:bold">إزاي تقول "أنا أفهم الإيطالية"؟</p>
+            <button class="option" onclick="check(true)">A) Io capisco l'italiano</button>
+            <button class="option" onclick="check(false)">B) Io capiamo l'italiano</button>
+            <button class="option" onclick="check(false)">C) Io capisce l'italiano</button>
+        </div>
+        <div id="quiz-result"></div>
+    </div>
+
+</div>
+
+<script>
+    function check(isCorrect) {
+        const res = document.getElementById('quiz-result');
+        if(isCorrect) {
+            res.innerHTML = "✅ مبروك! أنت كدة قفلت المستوى A1 بنجاح.";
+            res.style.color = "green";
+        } else {
+            res.innerHTML = "❌ راجع أفعال الـ ISC تاني يا بطل.";
+            res.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
