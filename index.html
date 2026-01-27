@@ -3,113 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية إيطالي بالمصري | المنهج الكامل</title>
+    <title>أكاديمية إيطالي بالمصري | الرئيسية</title>
     <style>
-        :root { --green: #009246; --red: #ce2b37; --blue: #2196f3; --gold: #d97706; --purple: #7c3aed; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; padding: 0; scroll-behavior: smooth; }
-        header { background: var(--green); color: white; padding: 30px; text-align: center; border-bottom: 8px solid var(--red); }
-        nav { background: #333; padding: 10px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; }
-        nav button { background: white; border: none; padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: 0.3s; }
-        nav button.active { background: var(--red); color: white; transform: scale(1.1); }
-        .container { max-width: 900px; margin: 20px auto; padding: 15px; }
-        .level-section { display: none; }
-        .level-section.active { display: block; animation: fadeIn 0.5s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .unit-card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-right: 10px solid var(--green); }
-        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; margin-right: 10px; }
-        .grammar-box { background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #ddd; }
-        .quiz-area { background: #fffbeb; border: 1px dashed #d97706; padding: 10px; border-radius: 10px; margin-top: 10px; }
-        h2 { color: var(--red); border-bottom: 2px solid #eee; padding-bottom: 5px; }
+        :root { --green: #009246; --white: #ffffff; --red: #ce2b37; --dark: #1a1a1b; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; margin: 0; text-align: center; color: var(--dark); }
+        header { background: var(--green); color: white; padding: 40px 20px; border-bottom: 10px solid var(--red); }
+        .welcome-msg { margin: 30px 0; font-size: 1.2rem; padding: 0 10px; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 20px; max-width: 1000px; margin: auto; }
+        .level-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; text-decoration: none; color: inherit; border-bottom: 5px solid #ddd; }
+        .level-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        .a1 { border-top: 10px solid var(--green); }
+        .a2 { border-top: 10px solid #2196f3; }
+        .b1 { border-top: 10px solid #d97706; }
+        .b2 { border-top: 10px solid #7c3aed; }
+        .level-card h2 { margin: 10px 0; font-size: 2rem; }
+        .level-card p { color: #666; font-size: 1.1rem; }
+        .btn { display: inline-block; margin-top: 15px; background: var(--dark); color: white; padding: 10px 25px; border-radius: 50px; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>🇮🇹 أكاديمية إيطالي بالمصري الشاملة</h1>
-    <p>من الصفر للاحتراف في صفحة واحدة</p>
+    <h1>🇮🇹 أكاديمية إيطالي بالمصري</h1>
+    <p>بوابتك لإتقان اللغة من الصفر للاحتراف</p>
 </header>
 
-<nav>
-    <button onclick="showLevel('a1', this)" class="active">A1</button>
-    <button onclick="showLevel('a2', this)">A2</button>
-    <button onclick="showLevel('b1', this)">B1</button>
-    <button onclick="showLevel('b2', this)">B2</button>
-</nav>
-
-<div class="container">
-
-    <section id="a1" class="level-section active">
-        <div class="unit-card">
-            <h2>الوحدة 0: قواعد النطق</h2>
-            <p>• حرف C ينطق (تش) مع e/i: <b>Cena</b> <button class="audio-btn" onclick="speak('Cena')">🔊</button></p>
-            <p>• حرف G ينطق (چ) مع e/i: <b>Giro</b> <button class="audio-btn" onclick="speak('Giro')">🔊</button></p>
-            <p>• الـ GN تنطق (ني): <b>Gnocchi</b> <button class="audio-btn" onclick="speak('Gnocchi')">🔊</button></p>
-        </div>
-        <div class="unit-card">
-            <h2>الوحدة 1: التحيات والتعارف</h2>
-            <p>• <b>Buongiorno:</b> صباح الخير <button class="audio-btn" onclick="speak('Buongiorno')">🔊</button></p>
-            <p>• <b>Piacere:</b> تشرفنا <button class="audio-btn" onclick="speak('Piacere')">🔊</button></p>
-        </div>
-        </section>
-
-    <section id="a2" class="level-section">
-        <div class="unit-card" style="border-right-color: var(--blue);">
-            <h2>الوحدة 1: الماضي القريب (Passato Prossimo)</h2>
-            <div class="grammar-box">المساعد (Essere/Avere) + اسم المفعول</div>
-            <p>• <b>Ho mangiato:</b> أنا أكلت <button class="audio-btn" onclick="speak('Ho mangiato')">🔊</button></p>
-            <p>• <b>Sono andato:</b> أنا ذهبت <button class="audio-btn" onclick="speak('Sono andato')">🔊</button></p>
-        </div>
-        <div class="unit-card" style="border-right-color: var(--blue);">
-            <h2>الوحدة 2: المنزل (La Casa)</h2>
-            <p>• <b>La cucina:</b> المطبخ <button class="audio-btn" onclick="speak('La cucina')">🔊</button></p>
-            <p>• <b>Il divano:</b> الكنبة <button class="audio-btn" onclick="speak('Il divano')">🔊</button></p>
-        </div>
-    </section>
-
-    <section id="b1" class="level-section">
-        <div class="unit-card" style="border-right-color: var(--gold);">
-            <h2>الوحدة 1: الماضي المستمر (Imperfetto)</h2>
-            <p>للوصف والعادات: <b>Parlavo:</b> كنت أتحدث <button class="audio-btn" onclick="speak('Io parlavo sempre')">🔊</button></p>
-        </div>
-        <div class="unit-card" style="border-right-color: var(--gold);">
-            <h2>الوحدة 2: الضمائر المباشرة</h2>
-            <p><b>Lo</b> (ه للمذكر) | <b>La</b> (ها للمؤنث)</p>
-            <p>مثال: <b>Lo vedo</b> (أنا أراه) <button class="audio-btn" onclick="speak('Lo vedo')">🔊</button></p>
-        </div>
-        <div class="unit-card" style="border-right-color: var(--gold);">
-            <h2>الوحدة 3: صيغة الشرط (Condizionale)</h2>
-            <p><b>Vorrei:</b> أود أن.. <button class="audio-btn" onclick="speak('Vorrei un caffè')">🔊</button></p>
-        </div>
-    </section>
-
-    <section id="b2" class="level-section">
-        <div class="unit-card" style="border-right-color: var(--purple);">
-            <h2>الوحدة 1: الماضي الأسبق (Trapassato)</h2>
-            <p><b>Avevo mangiato:</b> كنت قد أكلت <button class="audio-btn" onclick="speak('Avevo mangiato')">🔊</button></p>
-        </div>
-        <div class="unit-card" style="border-right-color: var(--purple);">
-            <h2>الوحدة 5: لو الشرطية (Periodo Ipotetico)</h2>
-            <p><b>Se potessi:</b> لو كنت أستطيع <button class="audio-btn" onclick="speak('Se potessi, lo farei')">🔊</button></p>
-        </div>
-    </section>
-
+<div class="welcome-msg">
+    <h2>اختار مستواك وابدأ المذاكرة يا مِعلم 🚀</h2>
 </div>
 
-<script>
-    function showLevel(levelId, btn) {
-        document.querySelectorAll('.level-section').forEach(s => s.classList.remove('active'));
-        document.getElementById(levelId).classList.add('active');
-        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        window.scrollTo(0,0);
-    }
-    function speak(text) {
-        window.speechSynthesis.cancel();
-        const msg = new SpeechSynthesisUtterance(text);
-        msg.lang = 'it-IT';
-        window.speechSynthesis.speak(msg);
-    }
-</script>
+<div class="menu-grid">
+    <a href="a1.html" class="level-card a1">
+        <h2>A1</h2>
+        <p>المبتدئ: النطق، التحيات، وأساسيات الكلام</p>
+        <span class="btn">دخول المستوى</span>
+    </a>
+
+    <a href="a2.html" class="level-card a2">
+        <h2>A2</h2>
+        <p>المبتدئ المتقدم: الماضي، المستقبل، ووصف الحياة</p>
+        <span class="btn">دخول المستوى</span>
+    </a>
+
+    <a href="b1.html" class="level-card b1">
+        <h2>B1</h2>
+        <p>المتوسط: التحدث بطلاقة وقواعد الربط المعقدة</p>
+        <span class="btn">دخول المستوى</span>
+    </a>
+
+    <a href="b2.html" class="level-card b2">
+        <h2>B2</h2>
+        <p>المتوسط المتقدم: الاحتراف وفهم النصوص الصعبة</p>
+        <span class="btn">دخول المستوى</span>
+    </a>
+</div>
+
+<footer style="margin-top: 50px; padding: 20px; color: #888;">
+    <p>© 2026 أكاديمية إيطالي بالمصري - كل الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>
