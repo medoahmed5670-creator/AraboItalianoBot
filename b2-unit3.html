@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B2 - الوحدة 3: المبني للمجهول</title>
+    <style>
+        :root { --color: #059669; }
+        body { font-family: 'Segoe UI', sans-serif; background: #ecfdf5; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; border-right: 12px solid var(--color); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>📰 الوحدة 3: La Forma Passiva</h1>
+        <p><b>مثال:</b> <span id="t3">Il palazzo è stato costruito nel 1900.</span></p>
+        <button style="background:var(--color); color:white; border:none; padding:10px; border-radius:5px;" onclick="speak('Il palazzo è stato costruito nel millenovecento')">اسمع النطق 🔊</button>
+        <p>(المبنى تَم بناؤه في عام 1900).</p>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
