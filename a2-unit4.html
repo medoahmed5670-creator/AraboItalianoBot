@@ -2,49 +2,26 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2 - الوحدة 4: الصحة (La Salute)</title>
+    <title>المستوى A1 - البداية</title>
     <style>
-        :root { --blue: #1b5e20; --red: #b71c1c; }
-        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; padding: 0; line-height: 1.8; }
-        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; }
-        .container { padding: 15px; max-width: 900px; margin: auto; }
-        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; border-right: 12px solid var(--blue); }
-        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; }
+        :root { --green: #009246; --red: #ce2b37; }
+        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
+        header { background: var(--green); color: white; padding: 20px; text-align: center; border-bottom: 5px solid var(--red); }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--green); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .audio-btn { cursor: pointer; background: #eee; border: none; padding: 5px 10px; border-radius: 5px; }
     </style>
 </head>
 <body>
-
-<div class="banner">
-    <h1>🏥 الوحدة 4: La Salute</h1>
-    <p>عند الطبيب ووصف أجزاء الجسم</p>
-</div>
-
-<div class="container">
-    <div class="card">
-        <h2>1. أجزاء الجسم (Il corpo)</h2>
-        <ul>
-            <li>La testa (الرأس) <button class="audio-btn" onclick="speak('La testa')">🔊</button></li>
-            <li>La gola (الحلق) <button class="audio-btn" onclick="speak('La gola')">🔊</button></li>
-            <li>La schiena (الظهر) <button class="audio-btn" onclick="speak('La schiena')">🔊</button></li>
-        </ul>
+    <header><h1>🇮🇹 المستوى A1: من الصفر</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <div class="container">
+        <div class="unit"><h3>الوحدة 0: قواعد النطق</h3><p>C + e/i = (تش) <button class="audio-btn" onclick="speak('Cena, Ciao')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 1: التحيات</h3><p>Buongiorno! <button class="audio-btn" onclick="speak('Buongiorno')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 2: الأرقام</h3><p>Uno, Due, Tre... <button class="audio-btn" onclick="speak('Uno, due, tre, quattro, cinque')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 3: أيام الأسبوع</h3><p>Lunedì, Martedì... <button class="audio-btn" onclick="speak('Lunedì, Martedì, Mercoledì')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 4: التعريف بالنفس</h3><p>Mi chiamo Ahmed. <button class="audio-btn" onclick="speak('Mi chiamo Ahmed')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 5: العائلة</h3><p>Madre, Padre, Fratello. <button class="audio-btn" onclick="speak('Madre, Padre, Fratello')">🔊</button></p></div>
     </div>
-
-    <div class="card" style="border-right-color: var(--red);">
-        <h2>2. التعبير عن الألم (Mi fa male...)</h2>
-        <div style="background:#fff3e0; padding:15px; border-radius:10px;">
-            <p><b>Mi fa male la testa</b> (راسي بتوجعني) <button class="audio-btn" onclick="speak('Mi fa male la testa')">🔊</button></p>
-            <p><b>Ho la febbre</b> (عندي سخونية) <button class="audio-btn" onclick="speak('Ho la febbre')">🔊</button></p>
-        </div>
-    </div>
-</div>
-
-<script>
-    function speak(text) {
-        let msg = new SpeechSynthesisUtterance();
-        msg.text = text; msg.lang = 'it-IT';
-        window.speechSynthesis.speak(msg);
-    }
-</script>
+    <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
 </body>
 </html>
