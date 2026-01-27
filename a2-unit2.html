@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 - الوحدة 2: في المنزل (La Casa)</title>
+    <style>
+        :root { --blue: #1e3a8a; --red: #ce2b37; --bg: #f8fafc; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; border-bottom: 6px solid var(--red); }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 12px solid var(--blue); }
+        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 1.1em; margin-right: 10px; }
+        .audio-btn:hover { background: #ddd; }
+        .highlight { color: var(--red); font-weight: bold; }
+        .vocab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 15px 0; }
+        .vocab-item { background: #f1f5f9; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🏠 الوحدة 2: La Casa (المنزل)</h1>
+    <p>تعلم وصف منزلك والأثاث بالنطق الصحيح</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. أجزاء المنزل (Le stanze)</h2>
+        <div class="vocab-grid">
+            <div class="vocab-item"><b>Il soggiorno</b><br>غرفة المعيشة <button class="audio-btn" onclick="speak('Il soggiorno')">🔊</button></div>
+            <div class="vocab-item"><b>La cucina</b><br>المطبخ <button class="audio-btn" onclick="speak('La cucina')">🔊</button></div>
+            <div class="vocab-item"><b>Il bagno</b><br>الحمام <button class="audio-btn" onclick="speak('Il bagno')">🔊</button></div>
+            <div class="vocab-item"><b>La camera</b><br>غرفة النوم <button class="audio-btn" onclick="speak('La camera da letto')">🔊</button></div>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. وصف المكان (Dove si trova?)</h2>
+        <p>عشان توصف مكان الحاجة في البيت بنستخدم حروف الجر دي:</p>
+        <table>
+            <tr><th>الكلمة</th><th>المعنى</th><th>اسمع</th></tr>
+            <tr><td>Sopra</td><td>فوق</td><td><button class="audio-btn" onclick="speak('Sopra il tavolo')">🔊</button></td></tr>
+            <tr><td>Sotto</td><td>تحت</td><td><button class="audio-btn" onclick="speak('Sotto il letto')">🔊</button></td></tr>
+            <tr><td>Accanto a</td><td>بجانب</td><td><button class="audio-btn" onclick="speak('Accanto alla finestra')">🔊</button></td></tr>
+            <tr><td>Dentro</td><td>داخل</td><td><button class="audio-btn" onclick="speak('Dentro l’armadio')">🔊</button></td></tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>3. العفش (L'arredamento)</h2>
+        <ul>
+            <li><span class="highlight">Il divano:</span> الكنبة <button class="audio-btn" onclick="speak('Il divano')">🔊</button></li>
+            <li><span class="highlight">La sedia:</span> الكرسي <button class="audio-btn" onclick="speak('La sedia')">🔊</button></li>
+            <li><span class="highlight">Tappeto:</span> سجادة <button class="audio-btn" onclick="speak('Il tappeto')">🔊</button></li>
+        </ul>
+    </div>
+
+    <div class="card" style="background: #fffbeb; border: 2px dashed #d97706;">
+        <h2>📝 اختبار سريع</h2>
+        <p>إزاي تقول "أنا في المطبخ"؟</p>
+        <button class="audio-btn" style="width:auto; border-radius:10px; padding:0 15px;" onclick="alert('✅ برنس! Io sono in cucina')">A) Io sono in cucina</button>
+        <button class="audio-btn" style="width:auto; border-radius:10px; padding:0 15px;" onclick="alert('❌ فكر تاني! Bagno يعني حمام')">B) Io sono in bagno</button>
+    </div>
+
+</div>
+
+<script>
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text;
+        msg.lang = 'it-IT';
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+
+</body>
+</html>
