@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>المستوى A2 - المبتدئ المتقدم</title>
+    <style>
+        :root { --blue: #2196f3; }
+        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
+        header { background: var(--blue); color: white; padding: 20px; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--blue); }
+    </style>
+</head>
+<body>
+    <header><h1>🚀 المستوى A2: القواعد الأساسية</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <div class="container">
+        <div class="unit"><h3>الوحدة 1: الماضي القريب (Passato Prossimo)</h3><p>Ho mangiato la pizza. <button onclick="speak('Ho mangiato la pizza')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 2: المنزل والأثاث</h3><p>La mia casa è grande. <button onclick="speak('La mia casa è grande')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 3: الملابس والتسوق</h3><p>Quanto costa هذه القميص؟ <button onclick="speak('Quanto costa questa camicia?')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 4: الصحة والجسم</h3><p>Mi fa male la testa. <button onclick="speak('Mi fa male la testa')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 5: المستقبل البسيط</h3><p>Domani andrò al mare. <button onclick="speak('Domani andrò al mare')">🔊</button></p></div>
+    </div>
+    <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
