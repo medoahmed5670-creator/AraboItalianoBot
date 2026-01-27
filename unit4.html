@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة 4: المظهر والطباع - Aspetto e Carattere</title>
+    <style>
+        :root { --green: #009246; --red: #ce2b37; --dark: #2c3e50; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg); margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 8px solid var(--red); }
+        .container { padding: 15px; max-width: 1000px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-right: 12px solid var(--green); }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .explanation { background: #fffde7; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #f9e79f; }
+        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; }
+        
+        .table-wrapper { width: 100%; overflow-x: auto; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        th { background: #333; color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+
+        .quiz-card { background: #eef2f7; border: 3px dashed var(--green); border-radius: 20px; padding: 25px; }
+        .option { display: block; width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #fff; border-radius: 10px; background: white; cursor: pointer; text-align: right; transition: 0.3s; }
+        .option:hover { border-color: var(--green); }
+        #quiz-result { margin-top: 20px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🇮🇹 الوحدة 4: Aspetto e Carattere</h1>
+    <p>وصف الأشخاص، الألوان، والصفات</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. الصفات (Gli Aggettivi)</h2>
+        <div class="explanation">الصفة في الإيطالي بتتبع الموصوف زي العربي بالظبط.</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>النوع</th><th>النهاية</th><th>مثال</th></tr>
+                <tr><td>مذكر</td><td>o</td><td>Ragazzo <span class="highlight">alto</span> (ولد طويل)</td></tr>
+                <tr><td>مؤنث</td><td>a</td><td>Ragazza <span class="highlight">alta</span> (بنت طويلة)</td></tr>
+                <tr><td>صفات تنتهي بـ E</td><td>e</td><td>Ragazzo/a <span class="highlight">intelligente</span> (ذكـي/ة)</td></tr>
+            </table>
+        </div>
+        <p>💡 ملحوظة: الصفات اللي أخرها <b>e</b> بتمشي مذكر ومؤنث في نفس الوقت!</p>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. الألوان (I Colori)</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr><td>Rosso (أحمر)</td><td>Blu (أزرق)</td><td>Verde (أخضر)</td></tr>
+                <tr><td>Giallo (أصفر)</td><td>Nero (أسود)</td><td>Bianco (أبيض)</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: #333;">
+        <h2>3. وصف الشكل (L'aspetto)</h2>
+        <ul>
+            <li><span class="highlight">Bello/a:</span> جميل/ة.</li>
+            <li><span class="highlight">Biondo/a:</span> أشقر/شقراء.</li>
+            <li><span class="highlight">Grasso/a:</span> سمين/ة.</li>
+            <li><span class="highlight">Magro/a:</span> نحيف/ة.</li>
+        </ul>
+    </div>
+
+    <div class="card quiz-card">
+        <h2>📝 اختبار الوحدة الرابعة</h2>
+        <div id="quiz-area">
+            <p style="font-weight:bold">إزاي توصف بنت بإنها "ذكية"؟</p>
+            <button class="option" onclick="check(false)">A) Una ragazza intelligenta</button>
+            <button class="option" onclick="check(true)">B) Una ragazza intelligente</button>
+            <button class="option" onclick="check(false)">C) Una ragazza intelligenti</button>
+        </div>
+        <div id="quiz-result"></div>
+    </div>
+
+</div>
+
+<script>
+    function check(isCorrect) {
+        const res = document.getElementById('quiz-result');
+        if(isCorrect) {
+            res.innerHTML = "✅ شاطر! الصفات اللي أخرها (e) مش بتتغير مع المؤنث.";
+            res.style.color = "green";
+        } else {
+            res.innerHTML = "❌ غلط! مفيش كلمة اسمها 'intelligenta'.. الصفة بتفضل Intelligent بالـ E.";
+            res.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
