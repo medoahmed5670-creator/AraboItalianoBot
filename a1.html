@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المستوى A1 - الدرس الأول بالتفصيل</title>
+    <style>
+        :root { --green: #009246; --red: #ce2b37; --dark: #333; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f9f9f9; line-height: 1.6; color: #333; padding: 15px; }
+        .header { text-align: center; background: white; padding: 20px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 25px; border-top: 5px solid var(--green); border-bottom: 5px solid var(--red); }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); position: relative; overflow: hidden; }
+        .card::before { content: ""; position: absolute; right: 0; top: 0; height: 100%; width: 8px; }
+        .progetto::before { background: var(--green); }
+        .espresso::before { background: var(--red); }
+        .contatto::before { background: var(--dark); }
+        h2 { color: var(--dark); font-size: 1.4em; margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        .explanation { background: #fef9e7; padding: 15px; border-radius: 10px; border-right: 4px solid #f39c12; margin: 15px 0; }
+        .example-box { background: #f0f7ff; padding: 15px; border-radius: 10px; border: 1px dashed #3498db; }
+        .italian-text { font-size: 1.3em; color: var(--red); font-weight: bold; text-align: center; display: block; margin: 10px 0; font-family: 'Georgia', serif; }
+        .audio-btn { background: var(--green); color: white; border: none; padding: 12px 25px; border-radius: 50px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; font-size: 16px; }
+        .tip { font-size: 0.9em; color: #666; font-style: italic; margin-top: 10px; display: block; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>📖 الدرس الأول: حجر الأساس</h1>
+    <p>أهلاً بيك في أول خطوة لإتقان الإيطالية بالمصري</p>
+</div>
+
+<div class="card progetto">
+    <h2>🟢 1. Progetto Italiano (القواعد)</h2>
+    <div class="explanation">
+        <b>موضوع اليوم: نوع الأسماء (مذكر ومؤنث)</b><br>
+        بص يا سيدي، في الإيطالي مفيش "كلمة كدة وخلاص"، لازم الكلمة تكون يا مذكر يا مؤنث. وعشان نسهل الدنيا، بنعرف النوع من "آخر حرف" في الكلمة.
+    </div>
+    
+    <p><b>أولاً: المفرد المذكر (Maschile):</b> غالباً بينتهي بحرف <b>(o)</b>.</p>
+    <div class="example-box">
+        • Ragazz<b>o</b> (ولد) <br>
+        • Libr<b>o</b> (كتاب) <br>
+        • Tren<b>o</b> (قطار)
+    </div>
+
+    <p><b>ثانياً: المفرد المؤنث (Femminile):</b> غالباً بينتهي بحرف <b>(a)</b>.</p>
+    <div class="example-box" style="border-color: #e91e63; background: #fff5f8;">
+        • Ragazz<b>a</b> (بنت) <br>
+        • Cas<b>a</b> (بيت) <br>
+        • Scuol<b>a</b> (مدرسة)
+    </div>
+    <span class="tip">* ملحوظة: دي القاعدة الأساسية، وفي دروس جاية هنعرف الشواذ.</span>
+</div>
+
+<div class="card espresso">
+    <h2>🔴 2. Espresso (تمرين النطق والشادونج)</h2>
+    <p>التمرين ده هدفه إن لسانك "يفك" في اللغة. عاوزك تسمع وتكرر الجملة دي 10 مرات كأنك إيطالي مولود في روما!</p>
+    
+    <div class="explanation">
+        <b>الجملة: "أهلاً، أنا اسمي أحمد، وأنت؟"</b>
+    </div>
+    
+    <span class="italian-text">"Ciao, io mi chiamo Ahmed, e tu?"</span>
+    
+    <button class="audio-btn" onclick="speak('Ciao, io mi chiamo Ahmed, e tu?')">🔊 اسمع النطق وصحح لنفسك</button>
+    <span class="tip">* نصيحة: حرف الـ "C" في Ciao بيتنطق "تش" زي "تشاي" بالبينج بونج.</span>
+</div>
+
+<div class="card contatto">
+    <h2>⚫ 3. Nuovo Contatto (مواقف وحياة يومية)</h2>
+    <p>تخيل إنك نزلت مطار مالبينسا في ميلانو، وعاوز تحيي الناس.. هتقول إيه؟</p>
+    
+    <div class="example-box">
+        <b>1. الصبح (لحد الساعة 4 عصراً):</b> <br>
+        <span style="color:var(--green)">Buongiorno!</span> (صباح الخير / يومك سعيد)<br><br>
+        <b>2. بليل (من بعد المغرب):</b> <br>
+        <span style="color:var(--red)">Buonasera!</span> (مساء الخير)
+    </div>
+    
+    <p style="margin-top:15px;"><b>3. في أي وقت (رسمي وغير رسمي):</b></p>
+    <span class="italian-text">"Salve!"</span>
+    <button class="audio-btn" style="background: var(--dark);" onclick="speak('Salve! Buongiorno! Buonasera!')">🔊 اسمع التحيات</button>
+</div>
+
+<script>
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance(text);
+        msg.lang = 'it-IT';
+        msg.rate = 0.9; // سرعة هادية شوية عشان الطالب يركز
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+
+</body>
+</html>
