@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B1 - الوحدة 7: الضمائر المركبة</title>
+    <style>
+        :root { --color: #7c3aed; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f3ff; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 20px; border-right: 12px solid var(--color); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .audio-btn { background: var(--color); color: white; border: none; border-radius: 5px; cursor: pointer; padding: 8px 15px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔗 الوحدة 7: I Pronomi Combinati</h1>
+        <p>إزاي تجمع ضميرين في كلمة واحدة (زي: Me lo ديهالي).</p>
+        <table>
+            <tr><th>الضمير</th><th>+ Lo</th><th>+ La</th></tr>
+            <tr><td>Mi</td><td>Me lo</td><td>Me la</td></tr>
+            <tr><td>Ti</td><td>Te lo</td><td>Te la</td></tr>
+            <tr><td>Gli / Le</td><td>Glielo</td><td>Gliela</td></tr>
+        </table>
+        <div style="background:#ede9fe; padding:15px; border-radius:10px; margin-top:15px;">
+            <b>مثال:</b> <span>Me lo dici?</span> (هتقولهولي؟) 
+            <button class="audio-btn" onclick="speak('Me lo dici?')">🔊 اسمع</button>
+        </div>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
