@@ -3,105 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إيطالي بالمصري - الوحدة الأولى كاملة</title>
+    <title>الوحدة الصفرية - الأبجدية والنطق</title>
     <style>
-        :root { --green: #009246; --red: #ce2b37; --dark: #2c3e50; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; line-height: 1.8; }
-        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 8px solid var(--red); }
-        .container { padding: 15px; max-width: 1000px; margin: auto; }
-        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-right: 10px solid var(--green); }
-        h2 { color: var(--dark); font-size: 1.4em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .explanation { background: #fffde7; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #f9e79f; }
-        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; }
-        
-        /* جداول الموبايل */
-        .table-wrapper { width: 100%; overflow-x: auto; }
-        table { width: 100%; border-collapse: collapse; min-width: 400px; margin-top: 10px; }
+        :root { --green: #009246; --red: #ce2b37; --dark: #333; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f4f9; margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 6px solid var(--red); }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border-right: 10px solid var(--green); }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .table-wrapper { width: 100%; overflow-x: auto; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; min-width: 400px; }
         th { background: #333; color: white; padding: 10px; }
         td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-
-        /* منطقة الكويز */
-        .quiz-section { background: #eef2f7; border: 2px dashed var(--green); border-radius: 15px; padding: 20px; }
-        .question { font-weight: bold; margin-bottom: 10px; color: var(--dark); }
-        .options button { display: block; width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ccc; border-radius: 8px; background: white; cursor: pointer; text-align: right; font-size: 1em; }
-        .options button:hover { background: #f0f0f0; }
-        #feedback { font-weight: bold; margin-top: 15px; text-align: center; }
+        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; font-size: 1.2em; }
     </style>
 </head>
 <body>
 
 <div class="banner">
-    <h1>🇮🇹 الوحدة الأولى: المرجع الشامل</h1>
-    <p>من النطق للأرقام للقواعد.. كله هنا!</p>
+    <h1>🇮🇹 الوحدة 0: Benvenuti</h1>
+    <p>أساسيات اللغة الإيطالية من الألف للياء</p>
 </div>
 
 <div class="container">
 
     <div class="card">
-        <h2>1. نطق الحروف (gli, gn, s, c, z, sch)</h2>
-        <div class="explanation">
-            • <b>GLI:</b> تنطق (ليي) مرققة: <span class="highlight">Famiglia</span>.<br>
-            • <b>GN:</b> تنطق (نيي): <span class="highlight">Signore</span>.<br>
-            • <b>SCH:</b> تنطق (سكـ): <span class="highlight">Schermo</span>.<br>
-            • <b>S بين حرفين متحركين:</b> تنطق (Z): <span class="highlight">Casa</span>.<br>
-            • <b>Z:</b> تنطق (Ts): <span class="highlight">Pizza</span>.
-        </div>
-    </div>
-
-    <div class="card" style="border-right-color: #f39c12;">
-        <h2>2. الأرقام (I Numeri 0-20)</h2>
+        <h2>1. الأبجدية الإيطالية (L'alfabeto)</h2>
+        <p>الإيطالية فيها 21 حرف أساسي، وكل حرف بيتنطق زي ما بيتكتب بالظبط:</p>
         <div class="table-wrapper">
             <table>
-                <tr><td>0: Zero</td><td>1: Uno</td><td>2: Due</td><td>3: Tre</td><td>4: Quattro</td></tr>
-                <tr><td>5: Cinque</td><td>6: Sei</td><td>7: Sette</td><td>8: Otto</td><td>9: Nove</td></tr>
-                <tr><td>10: Dieci</td><td>11: Undici</td><td>12: Dodici</td><td>13: Tredici</td><td>14: Quattordici</td></tr>
-                <tr><td>15: Quindici</td><td>16: Sedici</td><td>17: Diciassette</td><td>18: Diciotto</td><td>20: Venti</td></tr>
+                <tr>
+                    <td><span class="highlight">A</span> (آه)</td>
+                    <td><span class="highlight">B</span> (بي)</td>
+                    <td><span class="highlight">C</span> (تشي)</td>
+                    <td><span class="highlight">D</span> (دي)</td>
+                    <td><span class="highlight">E</span> (إيه)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">F</span> (إفِّي)</td>
+                    <td><span class="highlight">G</span> (جي)</td>
+                    <td><span class="highlight">H</span> (آكا)</td>
+                    <td><span class="highlight">I</span> (إي)</td>
+                    <td><span class="highlight">L</span> (إلِّي)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">M</span> (إمِّي)</td>
+                    <td><span class="highlight">N</span> (إنِّي)</td>
+                    <td><span class="highlight">O</span> (أوه)</td>
+                    <td><span class="highlight">P</span> (بي)</td>
+                    <td><span class="highlight">Q</span> (كو)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">R</span> (إرِّي)</td>
+                    <td><span class="highlight">S</span> (إسِّي)</td>
+                    <td><span class="highlight">T</span> (تي)</td>
+                    <td><span class="highlight">U</span> (أو)</td>
+                    <td><span class="highlight">V</span> (في/فو)</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Z</span> (زيتا)</td>
+                    <td colspan="4" style="background:#f9f9f9; font-size:0.8em;">* ملحوظة: الحروف J, K, W, X, Y بتستخدم للكلمات الأجنبية بس.</td>
+                </tr>
             </table>
         </div>
     </div>
 
-    <div class="card" style="border-right-color: var(--red);">
-        <h2>3. فعل الكينونة (Verbo Essere)</h2>
-        <div class="table-wrapper">
-            <table>
-                <tr><th>الضمير</th><th>التصريف</th><th>المعنى</th></tr>
-                <tr><td>Io</td><td class="highlight">Sono</td><td>أنا أكون</td></tr>
-                <tr><td>Tu</td><td class="highlight">Sei</td><td>أنت تكون</td></tr>
-                <tr><td>Lui/Lei</td><td class="highlight">È</td><td>هو/هي تكون</td></tr>
-                <tr><td>Noi</td><td class="highlight">Siamo</td><td>نحن نكون</td></tr>
-                <tr><td>Voi</td><td class="highlight">Siete</td><td>أنتم تكونوا</td></tr>
-                <tr><td>Loro</td><td class="highlight">Sono</td><td>هم يكونوا</td></tr>
-            </table>
+    <div class="card">
+        <h2>2. أسرار النطق (gli, gn, s, c, z, sch)</h2>
+        <p>بعد ما عرفنا الحروف، ركز في المقاطع اللي نطقها بيتغير...</p>
         </div>
-    </div>
-
-    <div class="card quiz-section">
-        <h2>📝 اختبار سريع على الوحدة الأولى</h2>
-        <div id="quiz-container">
-            <p class="question">1. ما هي أداة التعريف الصحيحة لكلمة "Studente"؟</p>
-            <div class="options">
-                <button onclick="checkAnswer(false, 'الكلمة تبدأ بـ S ووراها حرف ساكن، فكر تاني!')">A) Il studente</button>
-                <button onclick="checkAnswer(true, 'برافو! الكلمات اللي بتبدأ بـ S+ساكن بتاخد Lo.')">B) Lo studente</button>
-                <button onclick="checkAnswer(false, 'غلط، L\' بتيجي مع الحروف المتحركة بس.')">C) L' studente</button>
-            </div>
-            <div id="feedback"></div>
-        </div>
-    </div>
 
 </div>
-
-<script>
-    function checkAnswer(isCorrect, message) {
-        const feedback = document.getElementById('feedback');
-        if(isCorrect) {
-            feedback.innerHTML = "✅ " + message;
-            feedback.style.color = "green";
-        } else {
-            feedback.innerHTML = "❌ " + message;
-            feedback.style.color = "red";
-        }
-    }
-</script>
 
 </body>
 </html>
