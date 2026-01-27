@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B1 - الوحدة 2: الضمائر المباشرة</title>
+    <style>
+        :root { --blue: #0ea5e9; --dark: #0f172a; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f1f5f9; padding: 0; margin: 0; line-height: 1.8; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; }
+        .container { padding: 15px; max-width: 950px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; border-right: 12px solid var(--blue); }
+        .audio-btn { background: #e0f2fe; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: #fff; }
+        th, td { padding: 12px; border: 1px solid #cbd5e1; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🔄 الوحدة 2: I Pronomi Diretti</h1>
+    <p>تكلم باختصار وبذكاء كالإيطاليين</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>1. ما هي الضمائر؟</h2>
+        <p>بدل ما نكرر المفعول به، بنستخدم: (Lo, La, Li, Le).</p>
+        <table>
+            <tr><th>المفعول به</th><th>الضمير</th><th>مثال</th></tr>
+            <tr><td>مذكر مفرد (Il caffè)</td><td><b>Lo</b></td><td><button class="audio-btn" onclick="speak('Lo bevo ogni mattina')">🔊</button></td></tr>
+            <tr><td>مؤنث مفرد (La mela)</td><td><b>La</b></td><td><button class="audio-btn" onclick="speak('La mangio con piacere')">🔊</button></td></tr>
+        </table>
+    </div>
+
+    <div class="card" style="border-right-color: #ef4444;">
+        <h2>📝 اختبار الذكاء</h2>
+        <p>لو حد سألك: <b>Compri i libri?</b> (هتشتري الكتب؟).. ترد تقوله إيه؟</p>
+        <button class="audio-btn" style="width:auto; border-radius:10px; padding:0 20px;" onclick="alert('✅ ممتاز! Li للجمع المذكر')">A) Sì, li compro</button>
+        <button class="audio-btn" style="width:auto; border-radius:10px; padding:0 20px;" onclick="alert('❌ لا! الكتب جمع مذكر')">B) Sì, lo compro</button>
+    </div>
+</div>
+
+<script>
+    function speak(t) {
+        let m = new SpeechSynthesisUtterance(t); m.lang = 'it-IT'; window.speechSynthesis.speak(m);
+    }
+</script>
+</body>
+</html>
