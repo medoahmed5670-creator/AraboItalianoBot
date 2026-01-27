@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 - الوحدة 1: الماضي القريب (بالصوتيات)</title>
+    <style>
+        :root { --blue: #0056b3; --red: #ce2b37; --dark: #333; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; border-bottom: 6px solid var(--red); }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 12px solid var(--blue); }
+        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; margin-right: 10px; font-size: 1.2em; }
+        .audio-btn:hover { background: #ddd; }
+        .highlight { color: var(--red); font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        .quiz-option { display: block; width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #eee; border-radius: 10px; background: #fff; cursor: pointer; text-align: right; }
+        .quiz-option:hover { border-color: var(--blue); }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🕰️ الماضي القريب (Passato Prossimo)</h1>
+    <p>تعلم كيف تحكي قصصك بالنطق الإيطالي الصحيح</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. تكوين الماضي (La Formazione)</h2>
+        <p>الماضي بيتكون من مساعد (Essere/Avere) + اسم المفعول.</p>
+        <div style="background:#e3f2fd; padding:15px; border-radius:10px; text-align:center;">
+            <b>Esempio:</b> <span id="txt1">Ho mangiato una pizza.</span>
+            <button class="audio-btn" onclick="speak('Ho mangiato una pizza')">🔊</button>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. الأفعال الشاذة (مهمة جداً)</h2>
+        <p>مش كل الأفعال بتاخد ato/uto/ito.. دي أشهر الشواذ:</p>
+        <table>
+            <tr><th>الفعل</th><th>اسم المفعول</th><th>اسمع</th></tr>
+            <tr><td>Fare (يفعل)</td><td><span class="highlight">Fatto</span></td><td><button class="audio-btn" onclick="speak('Fatto')">🔊</button></td></tr>
+            <tr><td>Dire (يقول)</td><td><span class="highlight">Detto</span></td><td><button class="audio-btn" onclick="speak('Detto')">🔊</button></td></tr>
+            <tr><td>Vedere (يرى)</td><td><span class="highlight">Visto</span></td><td><button class="audio-btn" onclick="speak('Visto')">🔊</button></td></tr>
+            <tr><td>Prendere (يأخذ)</td><td><span class="highlight">Preso</span></td><td><button class="audio-btn" onclick="speak('Preso')">🔊</button></td></tr>
+        </table>
+    </div>
+
+    <div class="card" style="border-right-color: #333;">
+        <h2>📝 اختبار المستوى A2</h2>
+        
+        <p><b>السؤال 1:</b> اختار التصريف الصح لفعل (Andare - يذهب) مع Io:</p>
+        <button class="quiz-option" onclick="check(true, 'q1')">A) Sono andato / andata</button>
+        <button class="quiz-option" onclick="check(false, 'q1')">B) Ho andato</button>
+        
+        <p><b>السؤال 2:</b> ما هو اسم المفعول من فعل (Leggere - يقرأ)؟</p>
+        <button class="quiz-option" onclick="check(false, 'q2')">A) Leggiato</button>
+        <button class="quiz-option" onclick="check(true, 'q2')">B) Letto</button>
+    </div>
+
+</div>
+
+<script>
+    // وظيفة النطق باللكنة الإيطالية
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text;
+        msg.lang = 'it-IT'; // تحديد اللغة الإيطالية
+        window.speechSynthesis.speak(msg);
+    }
+
+    // وظيفة التحقق من الإجابات
+    function check(isCorrect, question) {
+        if(isCorrect) {
+            alert("✅ إجابة ممتازة يا بطل!");
+        } else {
+            alert("❌ فكر تاني.. الماضي محتاج تركيز.");
+        }
+    }
+</script>
+
+</body>
+</html>
