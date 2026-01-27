@@ -3,27 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أكاديمية اللغة الإيطالية</title>
+    <title>أكاديمية إيطالي بالمصري | المنهج الكامل</title>
     <style>
-        :root { --italy-green: #009246; --italy-white: #ffffff; --italy-red: #ce2b37; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f8f9fa; margin: 0; text-align: center; }
-        .hero { background: var(--italy-green); color: white; padding: 60px 20px; border-bottom: 10px solid var(--italy-red); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; max-width: 1200px; margin: auto; }
-        .level-card { background: white; padding: 30px; border-radius: 20px; text-decoration: none; color: #333; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s; border-top: 8px solid var(--italy-green); }
-        .level-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
-        .level-card h2 { margin: 0; color: var(--italy-red); }
+        :root { --green: #009246; --white: #ffffff; --red: #ce2b37; --dark: #1a1a1b; --blue: #2196f3; --gold: #d97706; --purple: #7c3aed; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f0f2f5; margin: 0; padding: 0; color: var(--dark); scroll-behavior: smooth; }
+        
+        /* Header & Navigation */
+        header { background: var(--green); color: white; padding: 30px 20px; text-align: center; border-bottom: 8px solid var(--red); }
+        nav { background: #333; padding: 10px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        nav button { background: white; border: none; padding: 12px 25px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: 0.3s; font-size: 1rem; }
+        nav button.active { background: var(--red); color: white; transform: scale(1.1); }
+
+        .container { max-width: 1100px; margin: 20px auto; padding: 15px; }
+        .level-section { display: none; animation: fadeIn 0.5s ease; }
+        .level-section.active { display: block; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Unit Styling */
+        .unit-card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); position: relative; overflow: hidden; }
+        .unit-card h3 { margin-top: 0; color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        
+        /* Level Colors */
+        .a1-card { border-right: 10px solid var(--green); }
+        .a2-card { border-right: 10px solid var(--blue); }
+        .b1-card { border-right: 10px solid var(--gold); }
+        .b2-card { border-right: 10px solid var(--purple); }
+
+        /* Helpers */
+        .audio-btn { background: #f0f0f0; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; transition: 0.2s; font-size: 1.2rem; }
+        .audio-btn:hover { background: #e0e0e0; transform: scale(1.1); }
+        .grammar-box { background: #f8fafc; padding: 15px; border-radius: 10px; border-left: 5px solid #cbd5e1; margin: 15px 0; }
+        .example-line { display: flex; align-items: center; justify-content: space-between; background: #fff; padding: 10px; border-radius: 8px; margin-bottom: 8px; border: 1px solid #eee; }
+        .quiz-area { background: #fffbea; border: 2px dashed #d97706; padding: 15px; border-radius: 10px; margin-top: 15px; }
+        .quiz-btn { background: var(--dark); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin: 5px; }
     </style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🇮🇹 تعلم الإيطالية من الصفر للاحتراف</h1>
-        <p>منهج كامل وشامل مع النطق الإيطالي الصحيح</p>
-    </div>
-    <div class="grid">
-        <a href="a1.html" class="level-card"><h2>A1</h2><p>المستوى المبتدئ الأول</p></a>
-        <a href="a2.html" class="level-card"><h2>A2</h2><p>المستوى المبتدئ الثاني</p></a>
-        <a href="b1.html" class="level-card"><h2>B1</h2><p>المستوى المتوسط الأول</p></a>
-        <a href="b2.html" class="level-card"><h2>B2</h2><p>المستوى المتوسط الثاني</p></a>
-    </div>
+
+<header>
+    <h1>🇮🇹 أكاديمية إيطالي بالمصري</h1>
+    <p>من الصفر (A1) حتى الاحتراف (B2) - في صفحة واحدة</p>
+</header>
+
+<nav id="mainNav">
+    <button onclick="showLevel('a1', this)" class="active">A1 المبتدئ</button>
+    <button onclick="showLevel('a2', this)">A2 المبتدئ المتقدم</button>
+    <button onclick="showLevel('b1', this)">B1 المتوسط</button>
+    <button onclick="showLevel('b2', this)">B2 المتوسط المتقدم</button>
+</nav>
+
+<div class="container">
+
+    <section id="a1" class="level-section active">
+        <div class="unit-card a1-card">
+            <h3>الوحدة 0: دستور النطق</h3>
+            <p>دي أهم وحدة عشان تنطق صح من أول يوم:</p>
+            <div class="example-line"><span>C + e/i = (تش) -> <b>Cena</b></span> <button class="audio-btn" onclick="speak('Cena')">🔊</button></div>
+            <div class="example-line"><span>G + e/i = (چ) -> <b>Giro</b></span> <button class="audio-btn" onclick="speak('Giro')">🔊</button></div>
+            <div class="example-line"><span>S بين حرفين متحركين = (ز) -> <b>Casa</b></span> <button class="audio-btn" onclick="speak('Casa')">🔊</button></div>
+        </div>
+
+        <div class="unit-card a1-card">
+            <h3>الوحدة 1: التحيات والتعارف</h3>
+            <div class="example-line"><span>Buongiorno (صباح الخير)</span> <button class="audio-btn" onclick="speak('Buongiorno')">🔊</button></div>
+            <div class="example-line"><span>Come ti chiami? (ما اسمك؟)</span> <button class="audio-btn" onclick="speak('Come ti chiami?')">🔊</button></div>
+        </div>
+    </section>
+
+    <section id="a2" class="level-section">
+        <div class="unit-card a2-card">
+            <h3>الوحدة 1: الماضي القريب (Passato Prossimo)</h3>
+            <div class="grammar-box">تكوينه: المساعد (Avere/Essere) + اسم المفعول.</div>
+            <div class="example-line"><span>Ho mangiato (أنا أكلت)</span> <button class="audio-btn" onclick="speak('Ho mangiato')">🔊</button></div>
+            <div class="quiz-area">
+                <b>سؤال سريع:</b> اختار المساعد لـ "أنا ذهبت":
+                <button class="quiz-btn" onclick="alert('برنس! أفعال الحركة بتاخد Essere')">Sono andato</button>
+                <button class="quiz-btn" onclick="alert('لا.. أفعال الحركة مش بتاخد Avere')">Ho andato</button>
+            </div>
+        </div>
+
+        <div class="unit-card a2-card">
+            <h3>الوحدة 2: المنزل (La Casa)</h3>
+            <div class="example-line"><span>La cucina (المطبخ)</span> <button class="audio-btn" onclick="speak('La cucina')">🔊</button></div>
+            <div class="example-line"><span>Il soggiorno (غرفة المعيشة)</span> <button class="audio-btn" onclick="speak('Il soggiorno')">🔊</button></div>
+        </div>
+    </section>
+
+    <section id="b1" class="level-section">
+        <div class="unit-card b1-card">
+            <h3>الوحدة 1: الماضي المستمر (Imperfetto)</h3>
+            <p>للوصف والحكايات في الماضي:</p>
+            <div class="example-line"><span>Da piccolo leggevo molto (وأنا صغير كنت أقرأ كثيراً)</span> <button class="audio-btn" onclick="speak('Da piccolo leggevo molto')">🔊</button></div>
+        </div>
+
+        <div class="unit-card b1-card">
+            <h3>الوحدة 3: صيغة الشرط (Condizionale)</h3>
+            <div class="example-line"><span>Vorrei un caffè (أريد قهوة - بطلب مهذب)</span> <button class="audio-btn" onclick="speak('Vorrei un caffè')">🔊</button></div>
+        </div>
+    </section>
+
+    <section id="b2" class="level-section">
+        <div class="unit-card b2-card">
+            <h3>الوحدة 1: الماضي الأسبق (Trapassato)</h3>
+            <div class="example-line"><span>Avevo già finito (كنت قد انتهيت بالفعل)</span> <button class="audio-btn" onclick="speak('Avevo già finito')">🔊</button></div>
+        </div>
+
+        <div class="unit-card b2-card">
+            <h3>الوحدة 5: لو الشرطية (Periodo Ipotetico)</h3>
+            <div class="grammar-box">لو (Se) + Congiuntivo + Condizionale</div>
+            <div class="example-line"><span>Se potessi, viaggerei (لو كنت أستطيع لسافرت)</span> <button class="audio-btn" onclick="speak('Se potessi, viaggerei')">🔊</button></div>
+        </div>
+
+        <div class="unit-card b2-card" style="text-align:center; background: var(--dark); color: white;">
+            <h3>🎓 نهاية المنهج</h3>
+            <p>أنت الآن متمكن من اللغة الإيطالية بشكل كامل!</p>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // وظيفة التنقل بين المستويات
+    function showLevel(levelId, btn) {
+        document.querySelectorAll('.level-section').forEach(s => s.classList.remove('active'));
+        document.getElementById(levelId).classList.add('active');
+        
+        document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        window.scrollTo(0, 0); // يطلع فوق لما يغير المستوى
+    }
+
+    // وظيفة النطق الإيطالي
+    function speak(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel(); // وقف أي صوت شغال قبل ما يبدأ الجديد
+            const msg = new SpeechSynthesisUtterance();
+            msg.text = text;
+            msg.lang = 'it-IT';
+            msg.rate = 0.9; // سرعة هادية شوية عشان الطالب يلقط النطق
+            window.speechSynthesis.speak(msg);
+        } else {
+            alert("للأسف متصفحك لا يدعم خاصية النطق الصوتي.");
+        }
+    }
+</script>
+
 </body>
 </html>
