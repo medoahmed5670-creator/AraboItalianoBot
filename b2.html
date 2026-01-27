@@ -2,21 +2,33 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>المستوى B2 - الاحتراف</title>
+    <title>المستوى B2 - المنهج المتقدم</title>
     <style>
-        :root { --purple: #7c3aed; }
-        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
-        header { background: var(--purple); color: white; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--purple); }
+        :root { --color: #7c3aed; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f5f3ff; margin: 0; direction: rtl; }
+        header { background: var(--color); color: white; padding: 20px; text-align: center; }
+        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 10px solid var(--color); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .audio-btn { background: #eee; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+        .back-btn { display: inline-block; margin: 10px; color: white; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header><h1>🎓 المستوى B2: الإتقان الكامل</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <header>
+        <a href="index.html" class="back-btn">⬅️ رجوع للرئيسية</a>
+        <h1>المستوى B2: احتراف اللغة الإيطالية</h1>
+    </header>
     <div class="container">
-        <div class="unit"><h3>الوحدة 1: الماضي الأسبق</h3><p>Avevo già finito. <button onclick="speak('Avevo già finito quando sei arrivato')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 5: لو الشرطية المعقدة</h3><p>Se fossi stato ricco... <button onclick="speak('Se fossi stato ricco avrei comprato una Ferrari')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 10: مراجعة نهائية</h3><p>مبروك الاحتراف! <button onclick="speak('Complimenti! Hai finito il corso!')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 1: الماضي الأسبق (Trapassato Prossimo)</h3><p><b>Avevo già mangiato.</b> <button class="audio-btn" onclick="speak('Quando sei arrivato, io avevo già mangiato')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 2: الاحتمال في الماضي (Congiuntivo Passato)</h3><p><b>Spero أن يكون قد فهم.</b> <button class="audio-btn" onclick="speak('Spero che lui abbia capito la lezione')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 3: المبني للمجهول (Forma Passiva)</h3><p><b>È stato costruito.</b> <button class="audio-btn" onclick="speak('Il palazzo è stato costruito molti anni fa')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 4: الكلام المنقول (Discorso Indiretto)</h3><p>نقل ما قاله الآخرون. <button class="audio-btn" onclick="speak('Lui ha detto che sarebbe venuto alla festa')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 5: لو الشرطية (Periodo Ipotetico)</h3><p>التخيل: <b>Se fossi...</b> <button class="audio-btn" onclick="speak('Se fossi ricco, viaggerei tutto il mondo')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 6: اسم الفاعل (Gerundio)</h3><p>بينما أفعل.. <b>Mangiando.</b> <button class="audio-btn" onclick="speak('Mangiando si impara a cucinare')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 7: احتمال الماضي المستمر</h3><p><b>Magari parlassi...</b> <button class="audio-btn" onclick="speak('Magari parlassi l\'italiano come un madrelingua')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 8: الروابط المتقدمة</h3><p><b>Nonostante, Purché...</b> <button class="audio-btn" onclick="speak('Vengo alla festa purché ci sia anche tu')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 9: الأسماء المركبة</h3><p><b>Apribottiglie, Lavastoviglie.</b> <button class="audio-btn" onclick="speak('Ho comprato una nuova lavastoviglie')">🔊 اسمع</button></p></div>
+        <div class="unit"><h3>الوحدة 10: نهاية المشوار</h3><p>مبروك أنت الآن "مايسترو" إيطالي! <button class="audio-btn" onclick="speak('Congratulazioni! Ora parli l\'italiano come un vero esperto!')">🔊 اسمع</button></p></div>
     </div>
     <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
 </body>
