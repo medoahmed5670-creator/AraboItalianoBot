@@ -3,77 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الوحدة الصفرية - الأبجدية والنطق</title>
+    <title>الوحدة الصفرية: الأساسيات الكاملة</title>
     <style>
         :root { --green: #009246; --red: #ce2b37; --dark: #333; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f4f9; margin: 0; padding: 0; line-height: 1.8; }
         .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 6px solid var(--red); }
         .container { padding: 15px; max-width: 900px; margin: auto; }
         .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); border-right: 10px solid var(--green); }
-        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
         .table-wrapper { width: 100%; overflow-x: auto; margin-top: 10px; }
-        table { width: 100%; border-collapse: collapse; min-width: 400px; }
+        table { width: 100%; border-collapse: collapse; min-width: 450px; }
         th { background: #333; color: white; padding: 10px; }
         td { padding: 10px; border: 1px solid #ddd; text-align: center; }
-        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; font-size: 1.2em; }
+        .highlight { color: var(--red); font-weight: bold; }
+        .note { background: #fffde7; padding: 10px; border-radius: 5px; border-right: 5px solid #f9e79f; margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <div class="banner">
     <h1>🇮🇹 الوحدة 0: Benvenuti</h1>
-    <p>أساسيات اللغة الإيطالية من الألف للياء</p>
+    <p>كل أساسيات اللغة في صفحة واحدة</p>
 </div>
 
 <div class="container">
 
     <div class="card">
-        <h2>1. الأبجدية الإيطالية (L'alfabeto)</h2>
-        <p>الإيطالية فيها 21 حرف أساسي، وكل حرف بيتنطق زي ما بيتكتب بالظبط:</p>
+        <h2>1. الأبجدية (L'alfabeto)</h2>
         <div class="table-wrapper">
             <table>
-                <tr>
-                    <td><span class="highlight">A</span> (آه)</td>
-                    <td><span class="highlight">B</span> (بي)</td>
-                    <td><span class="highlight">C</span> (تشي)</td>
-                    <td><span class="highlight">D</span> (دي)</td>
-                    <td><span class="highlight">E</span> (إيه)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">F</span> (إفِّي)</td>
-                    <td><span class="highlight">G</span> (جي)</td>
-                    <td><span class="highlight">H</span> (آكا)</td>
-                    <td><span class="highlight">I</span> (إي)</td>
-                    <td><span class="highlight">L</span> (إلِّي)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">M</span> (إمِّي)</td>
-                    <td><span class="highlight">N</span> (إنِّي)</td>
-                    <td><span class="highlight">O</span> (أوه)</td>
-                    <td><span class="highlight">P</span> (بي)</td>
-                    <td><span class="highlight">Q</span> (كو)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">R</span> (إرِّي)</td>
-                    <td><span class="highlight">S</span> (إسِّي)</td>
-                    <td><span class="highlight">T</span> (تي)</td>
-                    <td><span class="highlight">U</span> (أو)</td>
-                    <td><span class="highlight">V</span> (في/فو)</td>
-                </tr>
-                <tr>
-                    <td><span class="highlight">Z</span> (زيتا)</td>
-                    <td colspan="4" style="background:#f9f9f9; font-size:0.8em;">* ملحوظة: الحروف J, K, W, X, Y بتستخدم للكلمات الأجنبية بس.</td>
-                </tr>
+                <tr><td>A (آه)</td><td>B (بي)</td><td>C (تشي)</td><td>D (دي)</td><td>E (إيه)</td></tr>
+                <tr><td>F (إفّي)</td><td>G (جي)</td><td>H (آكا)</td><td>I (إي)</td><td>L (إلّي)</td></tr>
+                <tr><td>M (إمّي)</td><td>N (إنّي)</td><td>O (أوه)</td><td>P (بي)</td><td>Q (كو)</td></tr>
+                <tr><td>R (إرّي)</td><td>S (إسّي)</td><td>T (تي)</td><td>U (أو)</td><td>V (في)</td></tr>
+                <tr><td>Z (زيتا)</td><td colspan="4">الحروف J, K, W, X, Y للكلمات الأجنبية.</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. أسرار النطق (Regole di Pronuncia)</h2>
+        <ul>
+            <li><b>C + (a, o, u):</b> تنطق (ك) مثل <span class="highlight">Casa</span>.</li>
+            <li><b>C + (e, i):</b> تنطق (تش) مثل <span class="highlight">Ciao</span>.</li>
+            <li><b>G + (e, i):</b> تنطق (جـ) معطشة مثل <span class="highlight">Gelato</span>.</li>
+            <li><b>GLI:</b> حرف الـ L يكون صامتاً تقريباً مثل <span class="highlight">Figlio</span> (فـيـيـو).</li>
+            <li><b>GN:</b> تنطق مثل "نيـ" في كلمة نياجرا مثل <span class="highlight">Signore</span>.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>3. الأرقام من 0 لـ 10 (I Numeri)</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr><td>0: Zero</td><td>1: Uno</td><td>2: Due</td><td>3: Tre</td><td>4: Quattro</td></tr>
+                <tr><td>5: Cinque</td><td>6: Sei</td><td>7: Sette</td><td>8: Otto</td><td>9: Nove</td></tr>
+                <tr><td colspan="5">10: <b>Dieci</b></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: #333;">
+        <h2>4. المذكر والمؤنث والجمع</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>النوع</th><th>المفرد</th><th>الجمع</th></tr>
+                <tr><td>مذكر</td><td>آخره <b>-o</b> (Ragazzo)</td><td>يتحول لـ <b>-i</b> (Ragazzi)</td></tr>
+                <tr><td>مؤنث</td><td>آخره <b>-a</b> (Ragazza)</td><td>يتحول لـ <b>-e</b> (Ragazze)</td></tr>
+                <tr><td>نوع تالت</td><td>آخره <b>-e</b> (Padre/Madre)</td><td>يتحول لـ <b>-i</b> (Padri/Madri)</td></tr>
             </table>
         </div>
     </div>
 
     <div class="card">
-        <h2>2. أسرار النطق (gli, gn, s, c, z, sch)</h2>
-        <p>بعد ما عرفنا الحروف، ركز في المقاطع اللي نطقها بيتغير...</p>
-        </div>
+        <h2>5. أدوات التعريف (Articoli Determinativi)</h2>
+        <div class="note">دي الـ "ال" في الإيطالي، وليها كذا شكل:</div>
+        <ul>
+            <li><b>Il:</b> للمذكر البادئ بحرف ساكن (Il libro).</li>
+            <li><b>Lo:</b> للمذكر البادئ بـ (Z) أو (S+ساكن) (Lo studente).</li>
+            <li><b>La:</b> للمؤنث البادئ بحرف ساكن (La casa).</li>
+            <li><b>L':</b> للمذكر أو المؤنث البادئ بحرف متحرك (L'amico / L'amica).</li>
+        </ul>
+    </div>
 
 </div>
-
 </body>
 </html>
