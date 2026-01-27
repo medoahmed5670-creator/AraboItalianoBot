@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B2 - الوحدة 6: الـ Gerundio</title>
+    <style>
+        :root { --color: #4b5563; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f9fafb; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; border-right: 12px solid var(--color); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔄 الوحدة 6: Il Gerundio</h1>
+        <p>الأفعال اللي بتنتهي بـ <b>-ando</b> أو <b>-endo</b>.</p>
+        <p><b>مثال:</b> <span>Sbagliando si impara.</span> (بالخطأ نتعلم) 
+        <button onclick="speak('Sbagliando si impara')">🔊</button></p>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
