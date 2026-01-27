@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B2 - الوحدة 2: الشك في الماضي</title>
+    <style>
+        :root { --color: #9333ea; }
+        body { font-family: 'Segoe UI', sans-serif; background: #faf5ff; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; border-right: 12px solid var(--color); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>💭 الوحدة 2: Congiuntivo Passato</h1>
+        <p><b>مثال:</b> <span id="t2">Spero che lui abbia capito.</span> (آمل أنه قد فَهِم).</p>
+        <button style="background:var(--color); color:white; border:none; padding:10px; border-radius:5px;" onclick="speak('Spero che lui abbia capito')">اسمع النطق 🔊</button>
+        <div style="margin-top:15px; border:1px dashed #9333ea; padding:10px;">
+            <b>القاعدة:</b> مساعد في الـ Congiuntivo + اسم المفعول.
+        </div>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
