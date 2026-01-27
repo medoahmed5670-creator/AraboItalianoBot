@@ -2,23 +2,33 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>المستوى A2 - المبتدئ المتقدم</title>
+    <title>المستوى A2 - المنهج الكامل</title>
     <style>
-        :root { --blue: #2196f3; }
-        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
-        header { background: var(--blue); color: white; padding: 20px; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; }
-        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--blue); }
+        :root { --color: #2196f3; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; margin: 0; direction: rtl; }
+        header { background: var(--color); color: white; padding: 20px; text-align: center; }
+        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 10px solid var(--color); box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .audio-btn { background: #eee; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+        .back-btn { display: inline-block; margin: 10px; color: white; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header><h1>🚀 المستوى A2: القواعد الأساسية</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <header>
+        <a href="index.html" class="back-btn">⬅️ رجوع للرئيسية</a>
+        <h1>المستوى A2: المبتدئ المتقدم</h1>
+    </header>
     <div class="container">
-        <div class="unit"><h3>الوحدة 1: الماضي القريب (Passato Prossimo)</h3><p>Ho mangiato la pizza. <button onclick="speak('Ho mangiato la pizza')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 2: المنزل والأثاث</h3><p>La mia casa è grande. <button onclick="speak('La mia casa è grande')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 3: الملابس والتسوق</h3><p>Quanto costa هذه القميص؟ <button onclick="speak('Quanto costa questa camicia?')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 4: الصحة والجسم</h3><p>Mi fa male la testa. <button onclick="speak('Mi fa male la testa')">🔊</button></p></div>
-        <div class="unit"><h3>الوحدة 5: المستقبل البسيط</h3><p>Domani andrò al mare. <button onclick="speak('Domani andrò al mare')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 1: الماضي القريب (Passato Prossimo)</h3><p>Ho mangiato, Sono andato. <button class="audio-btn" onclick="speak('Ho mangiato una pizza, sono andato a casa')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 2: المنزل والأثاث</h3><p>Cucina, Letto, Tavolo. <button class="audio-btn" onclick="speak('La cucina è nuova')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 3: حروف الجر (Preposizioni)</h3><p>In, Di, A, Da, Su... <button class="audio-btn" onclick="speak('Vado a Roma in treno')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 4: المستقبل البسيط</h3><p>Andrò, Farò, Vedrò. <button class="audio-btn" onclick="speak('Domani farò il compito')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 5: الصحة والعيادة</h3><p>Mi fa male la testa. <button class="audio-btn" onclick="speak('Ho mal di pancia')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 6: التسوق والأسعار</h3><p>Quanto costa? <button class="audio-btn" onclick="speak('Quanto costa questo vestito?')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 7: الأفعال المنعكسة</h3><p>Mi sveglio, Mi lavo. <button class="audio-btn" onclick="speak('Mi sveglio alle sette')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 8: الطقس وفصول السنة</h3><p>Fa caldo, Fa freddo. <button class="audio-btn" onclick="speak('In estate fa molto caldo')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 9: وسائل المواصلات</h3><p>Treno, Autobus, Aereo. <button class="audio-btn" onclick="speak('Prendo l\'autobus per andare al lavoro')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 10: مراجعة شاملة</h3><p>مبروك خلصت الـ A2. <button class="audio-btn" onclick="speak('Complimenti! Hai finito il livello A2')">🔊</button></p></div>
     </div>
     <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
 </body>
