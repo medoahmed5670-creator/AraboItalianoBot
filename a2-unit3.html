@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 - الوحدة 3: التسوق (Fare la spesa)</title>
+    <style>
+        :root { --blue: #0056b3; --red: #ce2b37; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-right: 12px solid var(--blue); }
+        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; font-size: 1.2em; }
+        .highlight { color: var(--red); font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🛍️ الوحدة 3: Fare la spesa</h1>
+    <p>تعلم كيف تتسوق وتختار ملابسك بالإيطالية</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>1. الملابس (Abbigliamento)</h2>
+        <table>
+            <tr><th>الكلمة</th><th>المعنى</th><th>اسمع</th></tr>
+            <tr><td>La camicia</td><td>القميص</td><td><button class="audio-btn" onclick="speak('La camicia')">🔊</button></td></tr>
+            <tr><td>I pantaloni</td><td>البنطلون</td><td><button class="audio-btn" onclick="speak('I pantaloni')">🔊</button></td></tr>
+            <tr><td>Le scarpe</td><td>الحذاء</td><td><button class="audio-btn" onclick="speak('Le scarpe')">🔊</button></td></tr>
+        </table>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. المقاسات والألوان (Taglie e Colori)</h2>
+        <p>• <b>Che taglia porta?</b> (مقاسك كام؟) <button class="audio-btn" onclick="speak('Che taglia porta?')">🔊</button></p>
+        <p>• <b>Sconto:</b> خصم. | <b>Prezzo:</b> سعر. | <b>Camerino:</b> غرفة القياس.</p>
+    </div>
+
+    <div class="card">
+        <h2>📝 اختبار سريع</h2>
+        <p>إزاي تقول "أنا عاوز أجرب القميص ده"؟</p>
+        <button onclick="alert('صح! Provare يعني يقيس/يجرب')" style="padding:10px;">A) Vorrei provare questa camicia</button>
+    </div>
+</div>
+
+<script>
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text; msg.lang = 'it-IT';
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+</body>
+</html>
