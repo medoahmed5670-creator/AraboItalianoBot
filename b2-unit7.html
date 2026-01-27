@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>B2 - الوحدة 7: احتمال الماضي</title>
+    <style>
+        :root { --color: #2563eb; }
+        body { font-family: 'Segoe UI', sans-serif; background: #eff6ff; padding: 20px; direction: rtl; }
+        .card { background: white; border-radius: 15px; padding: 25px; border-right: 12px solid var(--color); }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>💭 الوحدة 7: Congiuntivo Imperfetto</h1>
+        <p><b>مثال:</b> <span>Magari parlassi bene l'italiano!</span> (يا ريتني كنت بتكلم إيطالي كويس!)
+        <button onclick="speak('Magari parlassi bene l\'italiano')">🔊</button></p>
+    </div>
+    <script>function speak(t){let m=new SpeechSynthesisUtterance(t);m.lang='it-IT';window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
