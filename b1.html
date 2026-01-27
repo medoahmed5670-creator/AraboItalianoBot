@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>المستوى B1 - المتوسط</title>
+    <style>
+        :root { --gold: #d97706; }
+        body { font-family: sans-serif; background: #f4f4f4; margin: 0; }
+        header { background: var(--gold); color: white; padding: 20px; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 20px; }
+        .unit { background: white; padding: 20px; margin-bottom: 15px; border-radius: 10px; border-right: 8px solid var(--gold); }
+    </style>
+</head>
+<body>
+    <header><h1>📚 المستوى B1: التحدث بطلاقة</h1><a href="index.html" style="color:white;">العودة للرئيسية</a></header>
+    <div class="container">
+        <div class="unit"><h3>الوحدة 1: الماضي المستمر (Imperfetto)</h3><p>Quando ero piccolo... <button onclick="speak('Quando ero piccolo giocavo sempre')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 2: الضمائر المباشرة</h3><p>Lo compro io. <button onclick="speak('Lo compro io')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 3: صيغة الشرط</h3><p>Vorrei viaggiare. <button onclick="speak('Vorrei viaggiare in tutto il mondo')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 5: صيغة الأمر</h3><p>Vieni qui! <button onclick="speak('Vieni qui subito!')">🔊</button></p></div>
+        <div class="unit"><h3>الوحدة 9: صيغة الاحتمال (Congiuntivo)</h3><p>Spero che tu stia bene. <button onclick="speak('Spero che tu stia bene')">🔊</button></p></div>
+    </div>
+    <script>function speak(t){window.speechSynthesis.cancel(); const m=new SpeechSynthesisUtterance(t); m.lang='it-IT'; window.speechSynthesis.speak(m);}</script>
+</body>
+</html>
