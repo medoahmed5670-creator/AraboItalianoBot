@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 - الوحدة 4: الصحة (La Salute)</title>
+    <style>
+        :root { --blue: #1b5e20; --red: #b71c1c; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; border-right: 12px solid var(--blue); }
+        .audio-btn { background: #eee; border: none; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🏥 الوحدة 4: La Salute</h1>
+    <p>عند الطبيب ووصف أجزاء الجسم</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>1. أجزاء الجسم (Il corpo)</h2>
+        <ul>
+            <li>La testa (الرأس) <button class="audio-btn" onclick="speak('La testa')">🔊</button></li>
+            <li>La gola (الحلق) <button class="audio-btn" onclick="speak('La gola')">🔊</button></li>
+            <li>La schiena (الظهر) <button class="audio-btn" onclick="speak('La schiena')">🔊</button></li>
+        </ul>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. التعبير عن الألم (Mi fa male...)</h2>
+        <div style="background:#fff3e0; padding:15px; border-radius:10px;">
+            <p><b>Mi fa male la testa</b> (راسي بتوجعني) <button class="audio-btn" onclick="speak('Mi fa male la testa')">🔊</button></p>
+            <p><b>Ho la febbre</b> (عندي سخونية) <button class="audio-btn" onclick="speak('Ho la febbre')">🔊</button></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text; msg.lang = 'it-IT';
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+</body>
+</html>
