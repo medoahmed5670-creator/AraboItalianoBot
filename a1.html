@@ -3,131 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الوحدة 1: الأساسيات - كورس اللغة الإيطالية</title>
+    <title>الوحدة الأولى: المنهج الكامل</title>
     <style>
-        :root { --it-green: #009246; --it-red: #ce2b37; --it-white: #ffffff; --bg-light: #f8f9fa; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; color: #2c3e50; }
+        :root { --main: #009246; --accent: #ce2b37; --bg: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 0; color: #333; }
+        .banner { background: var(--main); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--accent); }
+        .container { max-width: 900px; margin: 20px auto; padding: 15px; }
+        .lesson-box { background: white; border-radius: 15px; padding: 25px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        h2 { color: var(--main); border-right: 5px solid var(--accent); padding-right: 15px; }
         
-        /* الهيدر زي الصور بالظبط */
-        .header-banner { background: var(--it-green); color: white; padding: 40px 20px; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 25px; position: relative; }
-        .unit-badge { background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; font-size: 14px; display: inline-block; margin-bottom: 10px; }
-        .header-banner h1 { margin: 10px 0; font-size: 28px; }
-        
-        .container { max-width: 800px; margin: 0 auto; padding: 15px; }
-        
-        /* تصميم الكروت */
-        .lesson-card { background: white; border-radius: 20px; padding: 25px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; }
-        .lesson-card h2 { color: var(--it-green); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
-        
-        /* تصميم الجداول اللي طلبتها */
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 10px; overflow: hidden; }
-        th { background-color: var(--it-green); color: white; padding: 15px; text-align: center; }
-        td { padding: 15px; border-bottom: 1px solid #eee; text-align: center; font-size: 16px; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        .it-word { color: var(--it-red); font-weight: bold; font-family: 'Georgia', serif; font-size: 18px; }
+        /* تصميم الجداول الاحترافي */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+        th { background: #333; color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+        tr:nth-child(even) { background: #fdfdfd; }
+        .highlight { color: var(--accent); font-weight: bold; }
 
-        /* زرار الصوت */
-        .audio-btn { background: #f0f0f0; border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; transition: 0.3s; }
-        .audio-btn:hover { background: #e0e0e0; }
-
-        .footer { text-align: center; padding: 20px; color: #7f8c8d; font-size: 14px; }
+        /* منطقة التمارين */
+        .quiz-box { background: #eef2f7; border-radius: 10px; padding: 20px; margin-top: 20px; }
+        .option-btn { display: block; width: 100%; padding: 10px; margin: 10px 0; border: 2px solid var(--main); background: white; border-radius: 8px; cursor: pointer; text-align: right; font-weight: bold; }
+        .option-btn:hover { background: var(--main); color: white; }
     </style>
 </head>
 <body>
 
-<div class="header-banner">
-    <div class="unit-badge">الوحدة 1</div>
-    <h1>الدرس 1: الأبجدية وقواعد الأسماء</h1>
-    <p>مقدمة شاملة في اللغة الإيطالية</p>
+<div class="banner">
+    <h1>🇮🇹 الوحدة الأولى: Benvenuti!</h1>
+    <p>منهج Nuovo Progetto Italiano - شرح بالمصري</p>
 </div>
 
 <div class="container">
-    
-    <div class="lesson-card">
-        <h2>🇮🇹 الأبجدية الإيطالية (L'alfabeto)</h2>
-        <p>تتكون الأبجدية من 21 حرفاً أساسياً، مقسمة إلى حروف متحركة وحروف ساكنة:</p>
+
+    <div class="lesson-box">
+        <h2>1. الأبجدية ونطق الحروف (L'alfabeto)</h2>
+        <p>الأبجدية الإيطالية سهلة، بس ركز في الحروف اللي نطقها بيتغير:</p>
         <table>
-            <thead>
-                <tr>
-                    <th>الحرف</th>
-                    <th>النطق بالمصري</th>
-                    <th>مثال</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>A</td><td>آه</td><td class="it-word">Amico</td></tr>
-                <tr><td>B</td><td>بي</td><td class="it-word">Bambino</td></tr>
-                <tr><td>C</td><td>تشي</td><td class="it-word">Ciao</td></tr>
-                <tr><td>D</td><td>دي</td><td class="it-word">Dov'è</td></tr>
-                <tr><td>E</td><td>إيه</td><td class="it-word">Esempio</td></tr>
-            </tbody>
+            <tr><th>الحرف</th><th>الحالة</th><th>النطق</th><th>مثال</th></tr>
+            <tr><td><b>C</b></td><td>بعده (e / i)</td><td>تشـ</td><td class="highlight">Ciao</td></tr>
+            <tr><td><b>C</b></td><td>بعده (a / o / u)</td><td>كـ</td><td class="highlight">Casa</td></tr>
+            <tr><td><b>G</b></td><td>بعده (e / i)</td><td>جـ (معطشة)</td><td class="highlight">Giro</td></tr>
+            <tr><td><b>H</b></td><td>في أول الكلمة</td><td>صامت (لا ينطق)</td><td class="highlight">Hotel</td></tr>
         </table>
     </div>
 
-    <div class="lesson-card">
-        <h2>📏 قواعد نوع الأسماء (بالتفصيل)</h2>
-        <p>القاعدة الأساسية لتحديد المذكر والمؤنث بناءً على الحرف الأخير:</p>
+    <div class="lesson-box">
+        <h2>2. قواعد الأسماء والجمع (Nomi e Plurali)</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>النوع</th>
-                    <th>ينتهي بـ</th>
-                    <th>مثال إيطالي</th>
-                    <th>الترجمة</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><b>مفرد مذكر</b></td>
-                    <td><b>-o</b></td>
-                    <td class="it-word">Ragazzo</td>
-                    <td>ولد</td>
-                </tr>
-                <tr>
-                    <td><b>مفرد مؤنث</b></td>
-                    <td><b>-a</b></td>
-                    <td class="it-word">Ragazza</td>
-                    <td>بنت</td>
-                </tr>
-                <tr>
-                    <td><b>مفرد (مذكر/مؤنث)</b></td>
-                    <td><b>-e</b></td>
-                    <td class="it-word">Studente</td>
-                    <td>طالب / طالبة</td>
-                </tr>
-            </tbody>
+            <tr><th>النوع</th><th>المفرد</th><th>الجمع</th><th>مثال</th></tr>
+            <tr><td>مذكر</td><td>ينتهي بـ <b>-o</b></td><td>يتحول لـ <b>-i</b></td><td class="highlight">Libro -> Libri</td></tr>
+            <tr><td>مؤنث</td><td>ينتهي بـ <b>-a</b></td><td>يتحول لـ <b>-e</b></td><td class="highlight">Casa -> Case</td></tr>
+            <tr><td>مشترك</td><td>ينتهي بـ <b>-e</b></td><td>يتحول لـ <b>-i</b></td><td class="highlight">Padre -> Padri</td></tr>
         </table>
-        
-        <div style="background: #fff9db; padding: 15px; border-radius: 10px; border-right: 5px solid #f1c40f;">
-            <b>⚠️ ملحوظة مهمة:</b> الكلمات اللي بتنتهي بحرف <b>(e)</b> لازم تحفظ نوعها لأنها ممكن تكون مذكر أو مؤنث حسب الكلمة.
-        </div>
     </div>
 
-    <div class="lesson-card">
-        <h2>🔄 قاعدة الجمع (التغيير الحركي)</h2>
-        <p>لما بنحول من مفرد لجمع، الحرف الأخير بيتغير كالتالي:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>من (مفرد)</th>
-                    <th>إلى (جمع)</th>
-                    <th>مثال مفرد</th>
-                    <th>مثال جمع</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>o</td><td>i</td><td>Libro</td><td>Libri</td></tr>
-                <tr><td>a</td><td>e</td><td>Casa</td><td>Case</td></tr>
-                <tr><td>e</td><td>i</td><td>Classe</td><td>Classi</td></tr>
-            </tbody>
-        </table>
+    <div class="lesson-box quiz-box">
+        <h2 style="border:none">📝 تمرين سريع (Quiz)</h2>
+        <p>ما هو جمع كلمة <b>"Ragazza"</b> (بنت)؟</p>
+        <button class="option-btn" onclick="check(false)">A) Ragazzi</button>
+        <button class="option-btn" onclick="check(true)">B) Ragazze</button>
+        <button class="option-btn" onclick="check(false)">C) Ragazzo</button>
+        <p id="result" style="font-weight:bold; color: var(--accent); margin-top:10px;"></p>
     </div>
 
 </div>
 
-<div class="footer">
-    تم التطوير بواسطة مطوري يلا إيطالي. جميع الحقوق محفوظة.
-</div>
+<script>
+    function check(isCorrect) {
+        const res = document.getElementById('result');
+        if(isCorrect) {
+            res.innerHTML = "✅ برافو! إجابة صحيحة (A تتحول لـ E في المؤنث).";
+            res.style.color = "green";
+        } else {
+            res.innerHTML = "❌ غلط، ركز تاني! المؤنث آخره A وجمعه بيبقى E.";
+            res.style.color = "red";
+        }
+    }
+</script>
 
 </body>
 </html>
