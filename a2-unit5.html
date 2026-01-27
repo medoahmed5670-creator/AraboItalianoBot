@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 - الوحدة 5: المستقبل (Il Futuro)</title>
+    <style>
+        :root { --blue: #6a1b9a; --red: #ad1457; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfdfd; margin: 0; padding: 0; }
+        .banner { background: var(--blue); color: white; padding: 30px; text-align: center; }
+        .container { padding: 15px; max-width: 900px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; border-right: 12px solid var(--blue); }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🚀 الوحدة 5: Il Futuro Semplice</h1>
+    <p>كيف تخطط لمستقبلك بالإيطالية</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>1. تصريف المستقبل</h2>
+        <p>بنشيل آخر حرفين ونحط النهايات دي (مثال مع Parlare):</p>
+        <ul>
+            <li>Io parler<b>ò</b> (سأتحدث)</li>
+            <li>Tu parler<b>ai</b> (ستتحدث)</li>
+            <li>Lui/Lei parler<b>à</b> (سيتحدث)</li>
+        </ul>
+        <button class="audio-btn" onclick="speak('Io parlerò, tu parlerai, lui parlerà')">اسمع التصريف 🔊</button>
+    </div>
+
+    <div class="card" style="background:#e8f5e9;">
+        <h2>🎓 مبروك!</h2>
+        <p>بانتهاء هذه الوحدة، تكون قد أتممت المستوى الثاني (A2) بنجاح.</p>
+    </div>
+</div>
+
+<script>
+    function speak(text) {
+        let msg = new SpeechSynthesisUtterance();
+        msg.text = text; msg.lang = 'it-IT';
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+</body>
+</html>
