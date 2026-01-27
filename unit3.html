@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الوحدة 3: في المدينة - In città</title>
+    <style>
+        :root { --green: #009246; --red: #ce2b37; --dark: #2c3e50; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg); margin: 0; padding: 0; line-height: 1.8; }
+        .banner { background: var(--green); color: white; padding: 30px 15px; text-align: center; border-bottom: 8px solid var(--red); }
+        .container { padding: 15px; max-width: 1000px; margin: auto; }
+        .card { background: white; border-radius: 15px; padding: 25px; margin-bottom: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-right: 12px solid var(--green); }
+        h2 { color: var(--dark); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .explanation { background: #fffde7; padding: 15px; border-radius: 8px; margin: 10px 0; border: 1px solid #f9e79f; }
+        .highlight { color: var(--red); font-weight: bold; font-family: 'Georgia', serif; }
+        
+        .table-wrapper { width: 100%; overflow-x: auto; margin: 15px 0; }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        th { background: #333; color: white; padding: 12px; }
+        td { padding: 12px; border: 1px solid #ddd; text-align: center; }
+
+        .quiz-card { background: #eef2f7; border: 3px dashed var(--green); border-radius: 20px; padding: 25px; }
+        .option { display: block; width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #fff; border-radius: 10px; background: white; cursor: pointer; text-align: right; transition: 0.3s; }
+        .option:hover { border-color: var(--green); }
+        #quiz-result { margin-top: 20px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="banner">
+    <h1>🇮🇹 الوحدة 3: In città</h1>
+    <p>أدوات التعريف للجمع، حروف الجر المدمجة، ووصف المكان</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>1. أدوات التعريف للجمع (Articoli Plurali)</h2>
+        <div class="explanation">في الوحدة 0 خدت المفرد، دلوقتي لازم تعرف تجمع "الـ":</div>
+        
+        <h3>🔹 جمع المذكر (Plurale Maschile):</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>المفرد</th><th>الأداة في الجمع</th><th>مثال</th></tr>
+                <tr><td>Il</td><td class="highlight">I</td><td>Il libro -> I libri</td></tr>
+                <tr><td>Lo / L'</td><td class="highlight">Gli</td><td>Lo studente -> Gli studenti</td></tr>
+            </table>
+        </div>
+
+        <h3>🔸 جمع المؤنث (Plurale Femminile):</h3>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>المفرد</th><th>الأداة في الجمع</th><th>مثال</th></tr>
+                <tr><td>La / L'</td><td class="highlight">Le</td><td>La casa -> Le case</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: var(--red);">
+        <h2>2. حروف الجر المدمجة (Preposizioni Articolate)</h2>
+        <div class="explanation">لما حرف الجر يجي وراه "الـ"، بيدمجوا مع بعض. دي أشهر الحالات (حرف A و DI):</div>
+        <div class="table-wrapper">
+            <table>
+                <tr><th>حرف الجر + الـ</th><th>الدمج</th><th>مثال</th></tr>
+                <tr><td>A + Il</td><td class="highlight">Al</td><td>Vado al cinema (أذهب إلى السينما)</td></tr>
+                <tr><td>A + Lo</td><td class="highlight">Allo</td><td>Allo stadio (في الاستاد)</td></tr>
+                <tr><td>Di + Il</td><td class="highlight">Del</td><td>Il libro del ragazzo (كتاب الولد)</td></tr>
+                <tr><td>In + Il</td><td class="highlight">Nel</td><td>Nel treno (في القطار)</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="card" style="border-right-color: #333;">
+        <h2>3. أين يوجد؟ (Dove si trova?)</h2>
+        <div class="explanation">كلمات مهمة عشان توصف مكان حاجة:</div>
+        <ul>
+            <li><span class="highlight">Vicino a:</span> قريب من.</li>
+            <li><span class="highlight">Lontano da:</span> بعيد عن.</li>
+            <li><span class="highlight">Sopra:</span> فوق.</li>
+            <li><span class="highlight">Sotto:</span> تحت.</li>
+            <li><span class="highlight">Davanti a:</span> أمام.</li>
+        </ul>
+    </div>
+
+    <div class="card quiz-card">
+        <h2>📝 اختبار الوحدة الثالثة</h2>
+        <div id="quiz-area">
+            <p style="font-weight:bold">ما هو جمع "L'amico" (الصديق)؟</p>
+            <button class="option" onclick="check(false)">A) I amici</button>
+            <button class="option" onclick="check(true)">B) Gli amici</button>
+            <button class="option" onclick="check(false)">C) Le amici</button>
+        </div>
+        <div id="quiz-result"></div>
+    </div>
+
+</div>
+
+<script>
+    function check(isCorrect) {
+        const res = document.getElementById('quiz-result');
+        if(isCorrect) {
+            res.innerHTML = "✅ برنس! الأداة L' للمذكر بتتحول لـ Gli في الجمع.";
+            res.style.color = "green";
+        } else {
+            res.innerHTML = "❌ ركز! الكلمات اللي بتبدأ بمتحرك جمعها المذكر دايماً Gli.";
+            res.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
